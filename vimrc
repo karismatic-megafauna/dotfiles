@@ -1,4 +1,5 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Michael Hinrich's vimrc, forked from -
 "Michael Stock's vimrc -- http://github.com/mikeastock/dotfiles
 "Last updated 01/27/2014
 
