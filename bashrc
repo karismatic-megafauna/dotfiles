@@ -8,6 +8,7 @@ if [ -f "$HOME/.dircolors" ]
     eval $(dircolors -b $HOME/.dircolors)
 fi
 
+eval "$(rbenv init -)"
 
 #Aliases in .bash_aliases
 if [ -f ~/.bash_aliases ]; then

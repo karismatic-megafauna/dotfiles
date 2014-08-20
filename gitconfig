@@ -5,6 +5,7 @@
     fom = fetch origin master
 	com = checkout master
 	co = checkout
+    com = checkout origin master
     ci = commit
     st = status
     br = branch

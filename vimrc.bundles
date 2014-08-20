@@ -25,7 +25,8 @@ Bundle 'tpope/vim-fugitive'
 "rails/ruby
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'mikeastock/vim-vroom'
-
+"tmux
+Bundle 'edkolev/tmuxline.vim'
 "colors
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'nanotech/jellybeans.vim'
