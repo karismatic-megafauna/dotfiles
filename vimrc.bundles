@@ -1,9 +1,10 @@
 set nocompatible
 
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-"Let Vundle manage Vundle
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" Let Vundle manage Vundle
 Bundle 'gmarik/vundle'
 
 "misc
@@ -25,8 +26,10 @@ Bundle 'tpope/vim-fugitive'
 "rails/ruby
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'mikeastock/vim-vroom'
+
 "tmux
 Bundle 'edkolev/tmuxline.vim'
+
 "colors
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'nanotech/jellybeans.vim'
@@ -35,5 +38,4 @@ Bundle 'nanotech/jellybeans.vim'
 Bundle 'bling/vim-airline'
 Bundle 'bling/vim-bufferline'
 
-call vundle#end()            " required
 filetype plugin indent on    " required
