@@ -3,12 +3,13 @@
 	email = michaelghinrichs@gmail.com
 [alias]
 	co = checkout
+    com = checkout origin master
     ci = commit
     st = status
     br = branch
     df = diff
     pl = pull
-    ps = push
+    ph = push origin HEAD
     ad = add -p
     s = stash
     sp = stash pop
