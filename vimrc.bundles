@@ -27,8 +27,10 @@ Bundle 'tpope/vim-fugitive'
 "rails/ruby
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'mikeastock/vim-vroom'
+
 "tmux
 Bundle 'edkolev/tmuxline.vim'
+
 "colors
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'nanotech/jellybeans.vim'
@@ -37,4 +39,4 @@ Bundle 'nanotech/jellybeans.vim'
 Bundle 'bling/vim-airline'
 Bundle 'bling/vim-bufferline'
 
-filetype on
+filetype plugin indent on    " required
