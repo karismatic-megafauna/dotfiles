@@ -2,19 +2,22 @@
 	name = Michael Hinrichs
 	email = michaelghinrichs@gmail.com
 [alias]
+    fom = fetch origin master
+	com = checkout master
 	co = checkout
     ci = commit
     st = status
     br = branch
     df = diff
     pl = pull
-    ps = push
+    ph = push origin HEAD
     ad = add -p
     s = stash
     sp = stash pop
     rb = rebase origin/master
     hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    suir = submodule update --init --recursive
 [push]
 	default = current
 [core]
@@ -34,3 +37,5 @@
     current = yellow reverse
     local = yellow
     remote = green
+[color]
+	ui = auto
