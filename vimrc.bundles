@@ -13,6 +13,7 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'junegunn/vim-easy-align'
 Bundle 'rking/ag.vim'
+Bundle 'ervandew/supertab'
 
 "tpope
 Bundle 'tpope/vim-rails'
