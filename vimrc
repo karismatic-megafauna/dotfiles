@@ -34,6 +34,7 @@ set cursorline
 "Always show current position
 set ruler
 set number
+set relativenumber
 set cmdheight=2
 set switchbuf=useopen
 set numberwidth=6
