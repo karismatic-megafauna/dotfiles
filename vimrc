@@ -233,7 +233,6 @@ map <leader>gf :CtrlP features<cr>
 map <leader>gg :topleft 20 :split Gemfile<cr>
 map <leader>f :CtrlPMixed<cr>
 map <leader>b :CtrlPBuffer<cr>
-map <leader>w :w!<cr>
 let g:CtrlMaxFiles=40000
 
 
