@@ -235,7 +235,6 @@ map <leader>f :CtrlPMixed<cr>
 map <leader>b :CtrlPBuffer<cr>
 let g:CtrlMaxFiles=40000
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files and backups
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -243,7 +242,6 @@ let g:CtrlMaxFiles=40000
 set nobackup
 set nowb
 set noswapfile
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VROOM
