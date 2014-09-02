@@ -112,9 +112,9 @@ autocmd FileType gitcommit setlocal spell textwidth=72
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "set guioptions-=T
 set t_Co=256 " 256 colors
-let g:solarized_termcolors=256 
+let g:solarized_termcolors=16
 set background=dark
-colorscheme jellybeans
+colorscheme solarized 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Airline
@@ -233,7 +233,7 @@ map <leader>gf :CtrlP features<cr>
 map <leader>gg :topleft 20 :split Gemfile<cr>
 map <leader>f :CtrlPMixed<cr>
 map <leader>b :CtrlPBuffer<cr>
-
+map <leader>w :w!<cr>
 let g:CtrlMaxFiles=40000
 
 
@@ -250,8 +250,9 @@ set noswapfile
 " VROOM
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:vroom_detect_spec_helper = 1
-let g:vroom_use_spring = 1
-let g:vroom_use_binstubs = 1
+let g:vroom_use_spring = 0
+let g:vroom_use_binstubs = 0
+let g:vroom_test_unit_command = 'bundle exec ruby -Itest'
 let g:vroom_cucumber_path = 'cucumber'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
