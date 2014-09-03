@@ -23,6 +23,8 @@ export EDITOR=$VISUAL
 if which rbenv &>/dev/null ; then
   eval "$(rbenv init - --no-rehash)"
 fi
+# user
+DEFAULT_USER=`whoami`
 
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
