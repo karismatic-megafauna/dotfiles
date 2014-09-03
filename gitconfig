@@ -29,7 +29,7 @@
   meta = yellow bold
   frag = magenta bold
   old = red bold
-  new = green bold
+  new = green
   whitespace = red reverse
 [color "status"]
   added = yellow
