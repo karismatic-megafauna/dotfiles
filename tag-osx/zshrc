@@ -56,3 +56,5 @@ eval "$(rbenv init - --no-rehash)"
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+alias tmux="tmux -2"
