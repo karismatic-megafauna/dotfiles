@@ -1,7 +1,7 @@
 set nocompatible
 
 filetype off
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#rc()
 
 " Let Vundle manage Vundle
@@ -39,4 +39,4 @@ Bundle 'nanotech/jellybeans.vim'
 Bundle 'bling/vim-airline'
 Bundle 'bling/vim-bufferline'
 
-filetype plugin indent on    " required
+filetype on 
