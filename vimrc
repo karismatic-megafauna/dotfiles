@@ -111,8 +111,8 @@ autocmd FileType gitcommit setlocal spell textwidth=72
 " COLOR
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "set guioptions-=T
-set t_Co=16 " 256 colors
-let g:solarized_termcolors=16
+set t_Co=256 " 256 colors
+let g:solarized_termcolors=256
 set background=dark
 colorscheme solarized 
 
