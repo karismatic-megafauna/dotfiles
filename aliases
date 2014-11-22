@@ -22,6 +22,7 @@ alias v="$VISUAL"
 # tmux
 alias tma='tmux att -t'
 alias tmls='tmux ls'
+alias tmux="TERM=screen-256color-bce tmux"
 
 # git
 alias gci="git pull --rebase && rake && git push"
