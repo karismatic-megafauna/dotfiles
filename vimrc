@@ -226,11 +226,12 @@ map <leader>gv :CtrlP app/views<cr>
 map <leader>gc :CtrlP app/controllers<cr>
 map <leader>gm :CtrlP app/models<cr>
 map <leader>gh :CtrlP app/helpers<cr>
-map <leader>gs :CtrlP spec/<cr>
+map <leader>gs :CtrlP app/assets/stylesheets<cr>
+map <leader>gu :CtrlP app/assets/stylesheets/__v2/utilities<cr>
+map <leader>gg :topleft 20 :split app/assets/stylesheets/__v2 <cr>
 map <leader>gl :CtrlP lib<cr>
 map <leader>gp :CtrlP config<cr>
 map <leader>gf :CtrlP features<cr>
-map <leader>gg :topleft 20 :split Gemfile<cr>
 map <leader>f :CtrlPMixed<cr>
 map <leader>b :CtrlPBuffer<cr>
 let g:CtrlMaxFiles=40000
