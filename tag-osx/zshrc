@@ -36,6 +36,10 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH="./bin:$PATH"
+
 export PATH=/usr/local/rbenv/shims:/usr/local/rbenv/bin:/usr/local/redis/bin:/usr/local/pgsql/bin:./bin:/usr/local/abbyy/bin:$PATH
 export RBENV_ROOT="/usr/local/rbenv"
 eval "$(rbenv init - --no-rehash)"
