@@ -5,12 +5,12 @@
   fom = fetch origin master
 	com = checkout master
 	co = checkout
-  com = checkout origin master
   ci = commit
   st = status
   br = branch
   df = diff
-  pl = pull
+  pl = pull origin HEAD
+  plm = pull origin master
   ph = push origin HEAD
   ad = add -p
   s = stash
