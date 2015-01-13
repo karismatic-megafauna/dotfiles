@@ -33,8 +33,8 @@ set ignorecase smartcase
 set cursorline
 "Always show current position
 set ruler
-set number
 set relativenumber
+set number
 set cmdheight=2
 set switchbuf=useopen
 set numberwidth=6
