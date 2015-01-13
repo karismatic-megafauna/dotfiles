@@ -266,6 +266,6 @@ set laststatus=2
 set t_Co=256
 
 """""""""
-SCSS-lint
+"SCSS-lint
 """""""""
 let g:syntastic_scss_checkers = ['scss_lint']
