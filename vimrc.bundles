@@ -16,6 +16,7 @@ Bundle 'junegunn/vim-easy-align'
 Bundle 'rking/ag.vim'
 Bundle 'ervandew/supertab'
 Bundle 'scrooloose/syntastic'
+Bundle 'othree/html5.vim'
 
 "tpope
 Bundle 'tpope/vim-rails'
