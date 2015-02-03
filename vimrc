@@ -33,8 +33,8 @@ set ignorecase smartcase
 set cursorline
 "Always show current position
 set ruler
-set number
 set relativenumber
+set number
 set cmdheight=2
 set switchbuf=useopen
 set numberwidth=6
@@ -264,3 +264,8 @@ set laststatus=2
 " " Use 256 colours (Use this setting only if your terminal supports 256
 " colours)
 set t_Co=256
+
+"""""""""
+"SCSS-lint
+"""""""""
+let g:syntastic_scss_checkers = ['scss_lint']
