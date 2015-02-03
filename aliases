@@ -18,6 +18,7 @@ alias -g L='| wc -l'
 alias -g ONE="| awk '{ print \$1}'"
 alias e="$EDITOR"
 alias v="$VISUAL"
+alias sz="source ~/.zshrc"
 
 # tmux
 alias tmux='tmux -2'
@@ -47,5 +48,25 @@ alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
 # copy the database yml and paste it in your config 
 cpdb()
 {
- cp -i ~/.database_configs/database_$1.yml ~/procore/config/database.yml
+  #find all places where there is a database.yml
+  DATABASE_LOCS="find ~/ -maxdepth 5 -path '*config/database.yml*' | sed 's/home//' | sed 's/vagrant//' | sed 's/\///' | sed 's/\///' | sed 's/\///' "
+
+  #set second arg to procore if not defined
+  DIR=${2:-procore}
+
+  #check and see if directroy exists
+  if [ ! -d ~/$DIR ]; then
+    echo "$DIR does not exist, try one of these:"
+    echo "--------------------------------------"
+    eval $DATABASE_LOCS
+    return
+  fi
+
+  #check if database file exists and cp it
+  if [ $1 == 'local' ] || [ $1 == 'office' ]; then
+    cp ~/.database_configs/database_$1.yml ~/$DIR/config/database.yml
+    echo "now using your [$1] database file in the [$DIR] directory"
+  else
+    echo "specify either [local] or [office], to change database file"
+  fi
 }
