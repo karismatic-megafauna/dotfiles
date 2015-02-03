@@ -49,10 +49,10 @@ alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
 cpdb()
 {
   #find all places where there is a database.yml
-  database_locs="find ~/ -maxdepth 5 -path '*config/database.yml*' | sed 's/home//;s/vagrant//;s/\///;s/\///;s/\///'"
+  local database_locs="find ~/ -maxdepth 5 -path '*config/database.yml*' | sed 's/home//;s/vagrant//;s/\///;s/\///;s/\///'"
 
   #set second arg to procore if not defined
-  dir=${2:-procore}
+  local dir=${2:-procore}
 
   #check and see if directroy exists
   if [ ! -d ~/$dir ]; then
