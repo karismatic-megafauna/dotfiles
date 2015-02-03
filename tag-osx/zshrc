@@ -27,6 +27,10 @@ export EDITOR=$VISUAL
 # aliases 
 [[ -f ~/.aliases ]] && source ~/.aliases
 
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH="./bin:$PATH"
+export PATH=/usr/local/rbenv/shims:/usr/local/rbenv/bin:/usr/local/redis/bin:/usr/local/pgsql/bin:./bin:/usr/local/abbyy/bin:$PATH
+
 # node version manager
 export NVM_DIR="/home/vagrant/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
@@ -34,10 +38,6 @@ export NVM_DIR="/home/vagrant/.nvm"
 # ruby version manager
 export RBENV_ROOT="/usr/local/rbenv"
 eval "$(rbenv init - --no-rehash)"
-
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH="./bin:$PATH"
-export PATH=/usr/local/rbenv/shims:/usr/local/rbenv/bin:/usr/local/redis/bin:/usr/local/pgsql/bin:./bin:/usr/local/abbyy/bin:$PATH
 
 # ssh
  SSH_KEY_PATH="~/.ssh/dsa_id"
