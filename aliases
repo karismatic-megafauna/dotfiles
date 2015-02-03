@@ -20,18 +20,16 @@ alias e="$EDITOR"
 alias v="$VISUAL"
 
 # tmux
+alias tmux='tmux -2'
 alias tma='tmux att -t'
 alias tmls='tmux ls'
 
 # git
-alias gci="git pull --rebase && rake && git push"
 
 # Bundler
 alias be="bundle exec"
 
 # Tests and Specs
-alias t="ruby -I test"
-alias cuc="bundle exec cucumber"
 
 # Rubygems
 alias gi="gem install"
@@ -39,12 +37,15 @@ alias giv="gem install -v"
 
 # Rails
 alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
-alias m="migrate"
-alias rk="rake"
-alias s="rspec"
 
 #############
 # functions #
 #############
 
 # vimo($grepfile) { grep -Zril '$grepfile' app/ | xargs -0 sh -c 'vim -O "$@" < /dev/tty' vim }
+ 
+# copy the database yml and paste it in your config 
+cpdb()
+{
+ cp -i ~/.database_configs/database_$1.yml ~/procore/config/database.yml
+}
