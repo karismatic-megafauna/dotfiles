@@ -49,23 +49,23 @@ alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
 cpdb()
 {
   #find all places where there is a database.yml
-  DATABASE_LOCS="find ~/ -maxdepth 5 -path '*config/database.yml*' | sed 's/home//' | sed 's/vagrant//' | sed 's/\///' | sed 's/\///' | sed 's/\///' "
+  database_locs="find ~/ -maxdepth 5 -path '*config/database.yml*' | sed 's/home//;s/vagrant//;s/\///;s/\///;s/\///'"
 
   #set second arg to procore if not defined
-  DIR=${2:-procore}
+  dir=${2:-procore}
 
   #check and see if directroy exists
-  if [ ! -d ~/$DIR ]; then
-    echo "$DIR does not exist, try one of these:"
+  if [ ! -d ~/$dir ]; then
+    echo "$dir does not exist, try one of these:"
     echo "--------------------------------------"
-    eval $DATABASE_LOCS
+    eval $database_locs
     return
   fi
 
   #check if database file exists and cp it
   if [ $1 == 'local' ] || [ $1 == 'office' ]; then
-    cp ~/.database_configs/database_$1.yml ~/$DIR/config/database.yml
-    echo "now using your [$1] database file in the [$DIR] directory"
+    cp ~/.database_configs/database_$1.yml ~/$dir/config/database.yml
+    echo "now using your [$1] database file in the [$dir] directory"
   else
     echo "specify either [local] or [office], to change database file"
   fi
