@@ -156,6 +156,9 @@ nnoremap <leader>qq :q<cr>
 " Switch back to previous file
 nnoremap <leader><leader> <c-^>
 
+" Find and Replace Highlighted Word with <C-r>
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+
 " Smart way to move btw. windows
 map <C-j> <C-W>j
 map <C-k> <C-W>k
@@ -176,10 +179,6 @@ function! MapCR()
 endfunction
 call MapCR()
 
-"binding.pry remote
-
-nnoremap <leader>p :execute "normal Obinding.pry"<CR>
-nnoremap <leader>v :execute "normal O<% binding.pry  %>"<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MULTIPURPOSE TAB KEY
@@ -200,38 +199,30 @@ inoremap <s-tab> <c-n>
 " CTRLP
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if executable('ag')
-    " Use Ag over grep
-    set grepprg=ag\ --nogroup\ --nocolor
-
-    " Use ag in CtrlP
-    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-    let g:ctrlp_use_caching = 0
+  set grepprg=ag\ --nogroup\ --nocolor
+  let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
+        \ --ignore .git
+        \ --ignore .svn
+        \ --ignore .hg
+        \ --ignore .DS_Store
+        \ --ignore node_modules
+        \ --ignore images 
+        \ -g ""'
 endif
 
 " let g:ctrlp_working_path_mode = 'rc'
 let g:ctrlp_max_height = 30
 " let g:ctrlp_working_path_mode = 0
 
-set wildignore+=tags
-set wildignore+=*/tmp/*
-set wildignore+=*/vendor/*
-set wildignore+=*/spec/vcr/*
-set wildignore+=*/public/*
-set wildignore+=*/chef/*
-set wildignore+=*/coverage/*
-set wildignore+=*.png,*.jpg,*.otf,*.woff,*.jpeg,*.orig
-
-map <leader>gr :topleft :split config/routes.rb<cr>
-map <leader>gv :CtrlP app/views<cr>
-map <leader>gc :CtrlP app/controllers<cr>
-map <leader>gm :CtrlP app/models<cr>
-map <leader>gh :CtrlP app/helpers<cr>
-map <leader>gs :CtrlP app/assets/stylesheets<cr>
-map <leader>gu :CtrlP app/assets/stylesheets/__v2/utilities<cr>
-map <leader>gg :topleft 20 :split app/assets/stylesheets/__v2 <cr>
-map <leader>gl :CtrlP lib<cr>
-map <leader>gp :CtrlP config<cr>
-map <leader>gf :CtrlP features<cr>
+map <leader>;v :CtrlP app/views<cr>
+map <leader>;c :CtrlP app/controllers<cr>
+map <leader>;m :CtrlP app/models<cr>
+map <leader>;h :CtrlP app/helpers<cr>
+map <leader>;a :CtrlP app/assets<cr>
+map <leader>;r :CtrlP app/assets/javascripts/react_components<cr>
+map <leader>;l :CtrlP lib<cr>
+map <leader>;p :CtrlP config<cr>
+map <leader>;f :CtrlP features<cr>
 map <leader>f :CtrlPMixed<cr>
 map <leader>b :CtrlPBuffer<cr>
 let g:CtrlMaxFiles=40000
@@ -269,3 +260,12 @@ set t_Co=256
 "SCSS-lint
 """""""""
 let g:syntastic_scss_checkers = ['scss_lint']
+
+"""""""""
+" net-rw
+"""""""""
+map <leader>k :Vex<cr>
+map <leader>kr :Vex app/assets/javascripts/react_components<cr>
+let g:netrw_liststyle=3
+let g:netrw_winsize = 30 
+
