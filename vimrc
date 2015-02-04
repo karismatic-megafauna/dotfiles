@@ -156,6 +156,9 @@ nnoremap <leader>qq :q<cr>
 " Switch back to previous file
 nnoremap <leader><leader> <c-^>
 
+" Find and Replace Highlighted Word with <C-r>
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+
 " Smart way to move btw. windows
 map <C-j> <C-W>j
 map <C-k> <C-W>k
