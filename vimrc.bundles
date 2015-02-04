@@ -18,6 +18,9 @@ Bundle 'ervandew/supertab'
 Bundle 'scrooloose/syntastic'
 Bundle 'othree/html5.vim'
 
+"frontend
+Bundle 'mxw/vim-jsx'
+
 "tpope
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
