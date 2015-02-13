@@ -179,6 +179,8 @@ function! MapCR()
 endfunction
 call MapCR()
 
+" JSX syntax Highlighting everywhere
+let g:jsx_ext_required = 0
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MULTIPURPOSE TAB KEY
