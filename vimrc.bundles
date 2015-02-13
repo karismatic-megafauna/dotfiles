@@ -16,10 +16,19 @@ Bundle 'junegunn/vim-easy-align'
 Bundle 'rking/ag.vim'
 Bundle 'ervandew/supertab'
 Bundle 'scrooloose/syntastic'
-Bundle 'othree/html5.vim'
 
 "frontend
+Bundle 'othree/html5.vim'
+Bundle 'jelera/vim-javascript-syntax'
 Bundle 'mxw/vim-jsx'
+
+"snipmate
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+
+" vim-react-snippets:
+Bundle "justinj/vim-react-snippets"
 
 "tpope
 Bundle 'tpope/vim-rails'
