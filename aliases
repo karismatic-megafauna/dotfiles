@@ -19,6 +19,7 @@ alias -g ONE="| awk '{ print \$1}'"
 alias e="$EDITOR"
 alias v="$VISUAL"
 alias sz="source ~/.zshrc"
+alias vus="vagrant up && vagrant ssh"
 
 # tmux
 alias tmux='tmux -2'
