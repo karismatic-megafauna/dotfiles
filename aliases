@@ -20,6 +20,9 @@ alias e="$EDITOR"
 alias v="$VISUAL"
 alias sz="source ~/.zshrc"
 alias vus="vagrant up && vagrant ssh"
+alias rcom="cd ~/procore/app/assets/javascripts/react_components"
+alias pcom="cd ~/procore/app/assets/javascripts/react_components/procore_components"
+alias rs="bin/rails s -b 0.0.0.0"
 
 # tmux
 alias tmux='tmux -2'
