@@ -68,9 +68,12 @@ cpdb()
   fi
 
   #check if database file exists and cp it
-  if [ $1 == '-l' ] || [ $1 == '-o' ]; then
-    cp ~/.database_configs/database_$1.yml ~/$dir/config/database.yml
-    echo "now using your [$1] database file in the [$dir] directory"
+  if [ $1 == '-l' ]; then 
+    cp ~/.database_configs/database_local.yml ~/$dir/config/database.yml
+    echo "now using your [local] database file in the [$dir] directory"
+  elif [ $1 == '-o' ]; then
+    cp ~/.database_configs/database_office.yml ~/$dir/config/database.yml
+    echo "now using your [office] database file in the [$dir] directory"
   else
     echo "specify either [-l] or [-o], to change database file"
   fi
