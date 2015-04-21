@@ -40,7 +40,6 @@ Bundle 'tpope/vim-fugitive'
 
 "rails/ruby
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'mikeastock/vim-vroom'
 
 "tmux
 Bundle 'edkolev/tmuxline.vim'
@@ -52,5 +51,3 @@ Bundle 'nanotech/jellybeans.vim'
 "airline
 Bundle 'bling/vim-airline'
 Bundle 'bling/vim-bufferline'
-
-filetype on 
