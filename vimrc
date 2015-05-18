@@ -264,6 +264,11 @@ set t_Co=256
 let g:syntastic_scss_checkers = ['scss_lint']
 
 """""""""
+"jshint
+"""""""""
+let g:syntastic_javascript_checkers = ['jsxhint']
+
+"""""""""
 " net-rw
 """""""""
 map <leader>k :Vex<cr>
