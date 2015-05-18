@@ -272,7 +272,6 @@ let g:syntastic_javascript_checkers = ['jsxhint']
 " net-rw
 """""""""
 map <leader>k :Vex<cr>
-map <leader>kr :Vex app/assets/javascripts/react_components<cr>
 let g:netrw_liststyle=3
 let g:netrw_winsize = 30 
 
