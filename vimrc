@@ -179,9 +179,6 @@ function! MapCR()
 endfunction
 call MapCR()
 
-" JSX syntax Highlighting everywhere
-let g:jsx_ext_required = 0
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MULTIPURPOSE TAB KEY
 " " Indent if we're at the beginning of a line. Else, do completion.
@@ -264,10 +261,15 @@ set t_Co=256
 let g:syntastic_scss_checkers = ['scss_lint']
 
 """""""""
-"jsxhint
+"React
 """""""""
+"jsxhint linter
 let g:syntastic_javascript_checkers = ['jsxhint']
 let g:syntastic_javascript_jsxhint_exec = 'jsx-jshint-wrapper'
+
+" JSX syntax Highlighting everywhere
+let g:jsx_ext_required = 0
+
 
 """""""""
 " net-rw
