@@ -267,6 +267,7 @@ let g:syntastic_scss_checkers = ['scss_lint']
 "jsxhint
 """""""""
 let g:syntastic_javascript_checkers = ['jsxhint']
+let g:syntastic_javascript_jsxhint_exec = 'jsx-jshint-wrapper'
 
 """""""""
 " net-rw
