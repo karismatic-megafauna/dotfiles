@@ -17,3 +17,10 @@ fi
 
 export NVM_DIR="/home/vagrant/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+
+# NVM
+if [ -s ~/.nvm/nvm.sh ]; then
+	NVM_DIR=~/.nvm
+	source ~/.nvm/nvm.sh
+fi
