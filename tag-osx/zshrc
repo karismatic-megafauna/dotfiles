@@ -32,7 +32,7 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="/usr/local/rbenv/bin:$PATH"
 
 # node version manager
-export NVM_DIR="/home/vagrant/.nvm"
+export NVM_DIR="/Users/georgemichael/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 # ruby version manager
