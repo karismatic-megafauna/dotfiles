@@ -264,7 +264,7 @@ let g:syntastic_scss_checkers = ['scss_lint']
 "React
 """""""""
 "jsxhint linter
-let g:syntastic_javascript_checkers = ['jsxhint']
+let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_jsxhint_exec = 'jsx-jshint-wrapper'
 
 " JSX syntax Highlighting everywhere
