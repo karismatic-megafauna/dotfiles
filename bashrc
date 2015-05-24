@@ -15,10 +15,6 @@ if [ -f ~/.bash_aliases ]; then
    . ~/.bash_aliases
 fi
 
-export NVM_DIR="/home/vagrant/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-
 # NVM
 if [ -s ~/.nvm/nvm.sh ]; then
 	NVM_DIR=~/.nvm
