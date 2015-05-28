@@ -47,7 +47,6 @@ alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
 #############
 # functions #
 #############
-
 # vimo($grepfile) { grep -Zril '$grepfile' app/ | xargs -0 sh -c 'vim -O "$@" < /dev/tty' vim }
  
 # copy the database yml and paste it in your config 
