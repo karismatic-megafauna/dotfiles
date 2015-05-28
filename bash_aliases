@@ -12,6 +12,8 @@ alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -lah'
 
+alias tmux="TERM=screen-256color-bce tmux"
+
 
 #cd
 alias cd..='cd ..'
