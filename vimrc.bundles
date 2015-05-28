@@ -41,9 +41,6 @@ Bundle 'tpope/vim-fugitive'
 "rails/ruby
 Bundle 'vim-ruby/vim-ruby'
 
-"tmux
-Bundle 'edkolev/tmuxline.vim'
-
 "colors
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'nanotech/jellybeans.vim'
@@ -51,3 +48,6 @@ Bundle 'nanotech/jellybeans.vim'
 "airline
 Bundle 'bling/vim-airline'
 Bundle 'bling/vim-bufferline'
+
+"tmux
+Bundle 'edkolev/tmuxline.vim'

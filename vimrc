@@ -119,7 +119,9 @@ colorscheme solarized
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Airline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme = 'tomorrow'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tmuxline#enabled = 0
 " let g:airline_powerline_fonts = 1
 let g:bufferline_echo = 0
 
@@ -234,27 +236,6 @@ set nobackup
 set nowb
 set noswapfile
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" VROOM
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:vroom_detect_spec_helper = 1
-let g:vroom_use_spring = 0
-let g:vroom_use_binstubs = 0
-let g:vroom_test_unit_command = 'bundle exec ruby -Itest'
-let g:vroom_cucumber_path = 'cucumber'
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Powerline
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
-
-" Always show statusline
-set laststatus=2
-"
-" " Use 256 colours (Use this setting only if your terminal supports 256
-" colours)
-set t_Co=256
-
 """""""""
 "SCSS-lint
 """""""""
@@ -276,5 +257,3 @@ let g:jsx_ext_required = 0
 """""""""
 map <leader>k :Vex<cr>
 let g:netrw_liststyle=3
-let g:netrw_winsize = 30 
-
