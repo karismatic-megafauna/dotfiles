@@ -168,8 +168,8 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 " EXPERIMENTAL move through buffers from home
-map <leader>l :bn<cr>
-map <leader>h :bp<cr>
+map <leader>L :bn<cr>
+map <leader>H :bp<cr>
 
 " Use the arrows to something usefull
 map <right> :bn<cr>
