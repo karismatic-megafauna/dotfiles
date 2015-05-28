@@ -161,11 +161,15 @@ nnoremap <leader><leader> <c-^>
 " Find and Replace Highlighted Word with <C-r>
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
-" Smart way to move btw. windows
+" Move around in panes 
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+
+" EXPERIMENTAL move through buffers from home
+map <leader>L :bn<cr>
+map <leader>h :bp<cr>
 
 " Use the arrows to something usefull
 map <right> :bn<cr>
