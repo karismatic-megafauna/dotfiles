@@ -17,8 +17,7 @@
   sp = stash pop
   rb = rebase origin/master
   hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
-  lg = log --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit`
-  Files
+  lg = log --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	tree = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   suir = submodule update --init --recursive
 [push]
