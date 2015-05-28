@@ -26,11 +26,11 @@ windows:
       layout: tiled 
       panes:
         - frank:
-          - git pull && cd ~/procore/frontend && gulp dev
+          - cd ~/procore/frontend && gulp dev
         - dave:
-          - git pull && cd ~/procore && bs
+          - cd ~/procore && bs
         - ricky:
-          - git pull && ~/ProcoreComponents && gulp watch
+          - cd ~/ProcoreComponents && gulp watch
         - martin:
-          - git pull && ~/react-dataloader && gulp watch
+          - cd ~/react-dataloader && gulp watch
   - logs: tail -f log/development.log

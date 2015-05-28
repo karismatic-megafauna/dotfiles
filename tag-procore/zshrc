@@ -17,9 +17,6 @@ source $ZSH/oh-my-zsh.sh
 # custom configs 
 ###
 
-#for tmuxinator
-source ~/.bin/tmuxinator.zsh
-
 # use vim as visual editor
 export VISUAL=vim
 export EDITOR=$VISUAL
