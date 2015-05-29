@@ -1,6 +1,4 @@
-
-#Prompt settigns
-export PS1="\u@\[\e[36m\]\h\[\e[0m\] :: \w >> "
+alias tmux="TERM=screen-256color-bce tmux"
 
 #ls color
 if [ -f "$HOME/.dircolors" ]
