@@ -25,13 +25,6 @@ alias pcom="cd ~/procore/app/assets/javascripts/react_components/procore_compone
 alias rs="bin/rails s -b 0.0.0.0"
 alias bs="bin/rails s -b 0.0.0.0 | grep -E 'GET|POST|Rendered|Listening|scss'"
 
-# tmux
-alias tmux='tmux -2'
-alias tma='tmux att -t'
-alias tmls='tmux ls'
-
-# git
-
 # Bundler
 alias be="bundle exec"
 
