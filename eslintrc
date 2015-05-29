@@ -25,7 +25,7 @@
       "react/no-did-update-set-state": 1,
       "react/no-multi-comp": 1,
       "react/no-unknown-property": 1,
-      "react/prop-types": 1,
+      "react/prop-types": 2,
       "react/react-in-jsx-scope": 1,
       "react/self-closing-comp": 1,
       "react/sort-comp": 1,
@@ -52,7 +52,6 @@
       "semi": [2, "always"],
       "space-after-keywords": [2, "always"],
       "space-before-blocks": [2, "always"],
-      "space-before-function-paren": [2, {"anonymous": "always", "named": "never"}],
       "space-in-brackets": [2, "never"],
       "space-in-parens": [2, "never"],
       "spaced-line-comment": [2, "always"],
@@ -69,6 +68,7 @@
       "no-shadow": 0,
       "no-underscore-dangle": 0,
       "no-use-before-define": 0,
-      "quotes": 0
+      "quotes": 0,
+      "space-before-function-paren": [0, {"anonymous": "always", "named": "never"}]
     }
 }
