@@ -28,7 +28,8 @@ alias bs="bin/rails s -b 0.0.0.0 | grep -E 'GET|POST|Rendered|Listening|scss'"
 # Bundler
 alias be="bundle exec"
 
-# Tests and Specs
+# Tmux
+alias tmux="tmux -2"
 
 # Rubygems
 alias gi="gem install"
