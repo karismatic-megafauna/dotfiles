@@ -1,4 +1,4 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " Michael Hinrich's vimrc, forked from -
 " Michael Stock's vimrc -- http://github.com/mikeastock/dotfiles
 " Last updated 01/27/2014
@@ -219,45 +219,36 @@ endif
 let g:ctrlp_max_height = 30
 " let g:ctrlp_working_path_mode = 0
 
-map <leader>;v :CtrlP app/views<cr>
-map <leader>;c :CtrlP app/controllers<cr>
-map <leader>;m :CtrlP app/models<cr>
-map <leader>;h :CtrlP app/helpers<cr>
-map <leader>;a :CtrlP app/assets<cr>
-map <leader>;r :CtrlP app/assets/javascripts/react_components<cr>
-map <leader>;l :CtrlP lib<cr>
-map <leader>;p :CtrlP config<cr>
-map <leader>;f :CtrlP features<cr>
-map <leader>f :CtrlPMixed<cr>
+map <leader>gv :CtrlP app/views<cr>
+map <leader>gh :CtrlP app/helpers<cr>
+map <leader>ga :CtrlP app/assets<cr>
+map <leader>gp :CtrlP config<cr>
+map <leader>f :CtrlP frontend<cr>
 map <leader>b :CtrlPBuffer<cr>
 let g:CtrlMaxFiles=40000
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files and backups
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Turn backup off, since most stuff is in SVN, git anyway...
 set nobackup
 set nowb
 set noswapfile
 
-"""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Linters
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "SCSS-lint
-"""""""""
 let g:syntastic_scss_checkers = ['scss_lint']
 
-"""""""""
-"React
-"""""""""
-"jsxhint linter
+"eslint linter
 let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_javascript_jsxhint_exec = 'jsx-jshint-wrapper'
 
-" JSX syntax Highlighting everywhere
+"JSX syntax Highlighting everywhere
 let g:jsx_ext_required = 0
 
-
-"""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " net-rw
-"""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <leader>k :Vex<cr>
 let g:netrw_liststyle=3
