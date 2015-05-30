@@ -29,7 +29,8 @@ Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 
 " vim-react-snippets:
-Bundle "justinj/vim-react-snippets"
+Bundle "mileszs/vim-react-snippets"
+Bundle "honza/vim-snippets"
 
 "tpope
 Bundle 'tpope/vim-rails'
