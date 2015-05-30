@@ -7,8 +7,6 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="agency"
 DEFAULT_USER=$USER
 
-ZSH_SPECTRUM_TEXT=${ZSH_SPECTRUM_TEXT:-Marvelous Pigs in Satin}
-
 COMPLETION_WAITING_DOTS="true"
 
 plugins=(git)
