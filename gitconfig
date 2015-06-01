@@ -33,9 +33,9 @@
   new = green
   whitespace = red reverse
 [color "status"]
-  added = yellow
-  changed = green
-  untracked = cyan
+  added = green 
+  changed = cyan 
+  untracked = red 
 [color "branch"]
   current = yellow reverse
   local = yellow

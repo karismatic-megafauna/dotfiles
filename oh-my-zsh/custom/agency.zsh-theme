@@ -14,6 +14,7 @@ RED="196"
 WHITE="015"
 PURPLE="013"
 MAGENTA="005"
+CYAN="037"
 
 ZSH_THEME_GIT_PROMPT_PREFIX="[%{$FG[$GREEN]%}±%{$reset_color%}%{$FG[$WHITE]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}]"
@@ -21,7 +22,7 @@ ZSH_THEME_GIT_PROMPT_CLEAN="%{$FG[$GREEN]%}✓%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_AHEAD="%{$FG[$PURPLE]%}▴%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_BEHIND="%{$FG[$MAGENTA]%}▾%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_STAGED="%{$FG[$GREEN]%}●%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_UNSTAGED="%{$FG[$YELLOW]%}●%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_UNSTAGED="%{$FG[$CYAN]%}●%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$FG[$RED]%}●%{$reset_color%}"
 
 bureau_git_branch () {
