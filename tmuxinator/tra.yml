@@ -1,6 +1,6 @@
 # ~/.tmuxinator/workers.yml
 
-name: workers
+name: tra
 root: ~/
 
 # Optional tmux socket
