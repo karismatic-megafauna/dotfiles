@@ -106,7 +106,7 @@ get_space () {
 }
 
 _1LEFT="$_PATH"
-_1RIGHT="$(nvm_prompt_info)"
+_1RIGHT=""
 
 bureau_precmd () {
   _1SPACES=`get_space $_1LEFT $_1RIGHT`
@@ -116,7 +116,7 @@ bureau_precmd () {
 
 setopt prompt_subst
 PROMPT='$_LIBERTY $(bureau_git_prompt)'
-RPROMPT=''
+RPROMPT='$(nvm_prompt_info)'
 
 autoload -U add-zsh-hook
 add-zsh-hook precmd bureau_precmd
