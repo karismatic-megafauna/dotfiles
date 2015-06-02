@@ -24,7 +24,7 @@ tmux_options: -2
 # startup_window: logs
 
 windows:
-  - editor:
+  - servers:
       layout: tiled 
       panes:
         - frank:
@@ -35,4 +35,4 @@ windows:
           - cd ~/ProcoreComponents && gulp watch
         - martin:
           - cd ~/react-dataloader && gulp watch
-  - logs: tail -f log/development.log
+  - editor: vim 
