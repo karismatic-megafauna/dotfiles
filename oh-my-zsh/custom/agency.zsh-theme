@@ -78,9 +78,9 @@ _PATH="%{$FG[$GRAY_2]%}%~%{$reset_color%}"
 
 _name=$(uname -s)
 
-if [[ "$_name" -eq "Darwin" ]]; then
+if [ "$_name" == "Darwin" ]; then
   _LIBERTY="%{$FG[$BLUE]%}ʃ"
-else
+elif [ "$_name" == "Linux" ]; then
   _LIBERTY="%{$FG[$BLUE]%}Ʃ"
 fi
 _LIBERTY="$_LIBERTY%{$reset_color%}"
