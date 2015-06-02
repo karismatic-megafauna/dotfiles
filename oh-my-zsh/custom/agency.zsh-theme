@@ -18,7 +18,7 @@ PURPLE="013"
 MAGENTA="005"
 CYAN="037"
 
-ZSH_THEME_GIT_PROMPT_PREFIX="[%{$FG[$GREEN]%}±%{$reset_color%}%{$FG[$GRAY]%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="[%{$FG[$GRAY]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}]"
 ZSH_THEME_GIT_PROMPT_AHEAD="%{$FG[$PURPLE]%}▴%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_BEHIND="%{$FG[$MAGENTA]%}▾%{$reset_color%}"
