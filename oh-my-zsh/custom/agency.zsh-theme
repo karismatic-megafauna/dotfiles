@@ -7,18 +7,19 @@ ZSH_THEME_NVM_PROMPT_SUFFIX=""
 
 ### Git [±master ▾●]
 #to chose colors use 'spectrum_ls'
-
 GREEN="154"
 YELLOW="142"
 RED="196"
+BLUE="033"
 WHITE="015"
+GRAY="246"
+GRAY_2="240"
 PURPLE="013"
 MAGENTA="005"
 CYAN="037"
 
-ZSH_THEME_GIT_PROMPT_PREFIX="[%{$FG[$GREEN]%}±%{$reset_color%}%{$FG[$WHITE]%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="[%{$FG[$GREEN]%}±%{$reset_color%}%{$FG[$GRAY]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}]"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$FG[$GREEN]%}✓%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_AHEAD="%{$FG[$PURPLE]%}▴%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_BEHIND="%{$FG[$MAGENTA]%}▾%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_STAGED="%{$FG[$GREEN]%}●%{$reset_color%}"
@@ -45,9 +46,6 @@ bureau_git_status () {
   fi
   if $(echo "$_INDEX" | grep '^UU ' &> /dev/null); then
     _STATUS="$_STATUS$ZSH_THEME_GIT_PROMPT_UNMERGED"
-  fi
-  if $(command git rev-parse --verify refs/stash >/dev/null 2>&1); then
-    _STATUS="$_STATUS$ZSH_THEME_GIT_PROMPT_STASHED"
   fi
   if $(echo "$_INDEX" | grep '^## .*ahead' &> /dev/null); then
     _STATUS="$_STATUS$ZSH_THEME_GIT_PROMPT_AHEAD"
@@ -76,17 +74,15 @@ bureau_git_prompt () {
   echo $_result
 }
 
+_PATH="%{$FG[$GRAY_2]%}%~%{$reset_color%}"
 
-_PATH="%{$fg_bold[white]%}%~%{$reset_color%}"
+_name=$(uname -s)
 
-if [[ $EUID -eq 0 ]]; then
-  _USERNAME="%{$fg_bold[red]%}%n"
-  _LIBERTY="%{$FG[red]%}#"
+if [[ "$_name" -eq "Darwin" ]]; then
+  _LIBERTY="%{$FG[$BLUE]%}ʃ"
 else
-  _USERNAME="%{$fg_bold[white]%}%n"
-  _LIBERTY="%{$FG[033]%}$"
+  _LIBERTY="%{$FG[$BLUE]%}Ʃ"
 fi
-_USERNAME="$_USERNAME%{$reset_color%}@%m"
 _LIBERTY="$_LIBERTY%{$reset_color%}"
 
 
