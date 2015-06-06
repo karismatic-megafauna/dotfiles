@@ -16,12 +16,14 @@ Bundle 'junegunn/vim-easy-align'
 Bundle 'rking/ag.vim'
 Bundle 'ervandew/supertab'
 Bundle 'scrooloose/syntastic'
+Bundle 'nathanaelkane/vim-indent-guides'
 
 "frontend
 Bundle 'othree/html5.vim'
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'mxw/vim-jsx'
 Bundle 'moll/vim-node'
+Bundle 'pangloss/vim-javascript'
 
 "snipmate
 Bundle "MarcWeber/vim-addon-mw-utils"
