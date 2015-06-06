@@ -112,9 +112,8 @@ autocmd FileType gitcommit setlocal spell textwidth=72
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "set guioptions-=T
 set t_Co=256 " 256 colors
-let g:solarized_termcolors=256
+colorscheme mango 
 set background=dark
-colorscheme solarized 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Airline

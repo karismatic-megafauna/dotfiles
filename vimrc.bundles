@@ -46,8 +46,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'vim-ruby/vim-ruby'
 
 "colors
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'nanotech/jellybeans.vim'
+Bundle 'flazz/vim-colorschemes'
 
 "airline
 Bundle 'bling/vim-airline'
