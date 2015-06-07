@@ -17,6 +17,7 @@ Bundle 'rking/ag.vim'
 Bundle 'ervandew/supertab'
 Bundle 'scrooloose/syntastic'
 Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'Raimondi/delimitMate'
 
 "frontend
 Bundle 'othree/html5.vim'
