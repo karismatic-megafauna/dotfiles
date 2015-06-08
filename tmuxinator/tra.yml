@@ -28,11 +28,11 @@ windows:
       layout: tiled 
       panes:
         - frank:
-          - cd ~/procore/frontend && gulp dev
+          - cd ~/procore/frontend && ggpull && gulp dev
         - dave:
-          - cd ~/procore && bs
+          - cd ~/procore && ggpull && bs
         - ricky:
-          - cd ~/ProcoreComponents && gulp watch
+          - cd ~/ProcoreComponents && ggpull && gulp watch
         - martin:
-          - cd ~/react-dataloader && gulp watch
-  - editor: vim 
+          - cd ~/react-dataloader && ggpull && gulp watch
+  - editor: vim ~/procore/
