@@ -35,4 +35,4 @@ windows:
           - cd ~/ProcoreComponents && ggpull && gulp watch
         - martin:
           - cd ~/react-dataloader && ggpull && gulp watch
-  - editor: vim ~/procore/
+  - editor: cd ~/procore/frontend && vim
