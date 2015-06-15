@@ -20,11 +20,11 @@ CYAN="037"
 
 ZSH_THEME_GIT_PROMPT_PREFIX="[%{$FG[$GRAY]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}]"
-ZSH_THEME_GIT_PROMPT_AHEAD="%{$FG[$PURPLE]%}▴%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_BEHIND="%{$FG[$MAGENTA]%}▾%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_STAGED="%{$FG[$GREEN]%}●%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_UNSTAGED="%{$FG[$CYAN]%}●%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$FG[$RED]%}●%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_AHEAD="%{$FG[$PURPLE]%}❱%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_BEHIND="%{$FG[$MAGENTA]%}❱%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_STAGED="%{$FG[$GREEN]%}❱%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_UNSTAGED="%{$FG[$CYAN]%}❱%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$FG[$RED]%}❱%{$reset_color%}"
 
 bureau_git_branch () {
   ref=$(command git symbolic-ref HEAD 2> /dev/null) || \
