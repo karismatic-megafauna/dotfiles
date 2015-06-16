@@ -104,7 +104,7 @@ get_space () {
 
   echo $SPACES
 }
-
+_PATH="%{$FG[$GRAY_2]%}%~%{$reset_color%}"
 _1LEFT="$_PATH"
 _1RIGHT=""
 
