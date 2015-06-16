@@ -1,11 +1,9 @@
-# oh-my-zsh Bureau Theme
+# oh-my-zsh Agency Theme
 
 ### NVM
-
 ZSH_THEME_NVM_PROMPT_PREFIX="%B⬡%b "
 ZSH_THEME_NVM_PROMPT_SUFFIX=""
 
-### Git [±master ▾●]
 #to chose colors use 'spectrum_ls'
 GREEN="154"
 YELLOW="142"
@@ -17,14 +15,17 @@ GRAY_2="240"
 PURPLE="013"
 MAGENTA="005"
 CYAN="037"
+OSX="015"
+LINUX="014"
 
-ZSH_THEME_GIT_PROMPT_PREFIX="[%{$FG[$GRAY]%}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}]"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$FG[$GRAY]%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_AHEAD="%{$FG[$PURPLE]%}❯%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_BEHIND="%{$FG[$MAGENTA]%}❯%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_STAGED="%{$FG[$GREEN]%}❯%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_UNSTAGED="%{$FG[$CYAN]%}❯%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$FG[$RED]%}❯%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIVERGED="%{$FG[$RED]%}⎇ %{$reset_color%}"
 
 bureau_git_branch () {
   ref=$(command git symbolic-ref HEAD 2> /dev/null) || \
@@ -60,30 +61,33 @@ bureau_git_status () {
   echo $_STATUS
 }
 
-bureau_git_prompt () {
-  local _branch=$(bureau_git_branch)
+_name=$(uname -s)
+
+if [ "$_name" = "Darwin" ]; then
+  _LIBERTY="%{$FG[$OSX]%}❯"
+elif [ "$_name" = "Linux" ]; then
+  _LIBERTY="%{$FG[$LINUX]%}❯"
+fi
+_LIBERTY="$_LIBERTY%{$reset_color%}"
+
+bureau_git_decor() {
   local _status=$(bureau_git_status)
   local _result=""
-  if [[ "${_branch}x" != "x" ]]; then
-    _result="$ZSH_THEME_GIT_PROMPT_PREFIX$_branch"
-    if [[ "${_status}x" != "x" ]]; then
-      _result="$_result$_status"
-    fi
-    _result="$_result$ZSH_THEME_GIT_PROMPT_SUFFIX "
+  _result="$_LIBERTY"
+  if [[ "${_status}x" != "x" ]]; then
+    _result="$_status$_result"
   fi
   echo $_result
 }
 
-_PATH="%{$FG[$GRAY_2]%}%~%{$reset_color%}"
-
-_name=$(uname -s)
-
-if [ "$_name" = "Darwin" ]; then
-  _LIBERTY="%{$FG[$BLUE]%}☖"
-elif [ "$_name" = "Linux" ]; then
-  _LIBERTY="%{$FG[$BLUE]%}☗"
-fi
-_LIBERTY="$_LIBERTY%{$reset_color%}"
+bureau_git_branch_name() {
+  local _branch=$(bureau_git_branch)
+  local _result=""
+  if [[ "${_branch}x" != "x" ]]; then
+    _result="$ZSH_THEME_GIT_PROMPT_PREFIX$_branch$_result$ZSH_THEME_GIT_PROMPT_SUFFIX "
+  fi
+  echo $_result
+}
 
 
 get_space () {
@@ -111,7 +115,7 @@ bureau_precmd () {
 }
 
 setopt prompt_subst
-PROMPT='$_LIBERTY $(bureau_git_prompt)'
+PROMPT='$(bureau_git_branch_name)$(bureau_git_decor) '
 RPROMPT='$(nvm_prompt_info)'
 
 autoload -U add-zsh-hook
