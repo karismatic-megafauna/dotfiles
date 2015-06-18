@@ -40,7 +40,7 @@ set switchbuf=useopen
 set numberwidth=6
 set showtabline=2
 set winwidth=90
-set tags=tags;/ 
+set tags=tags;/
 set colorcolumn=80
 " Prevent Vim from clobbering the scrollback buffer. See
 " http://www.shallowsky.com/linux/noaltscreen.html
@@ -98,7 +98,7 @@ augroup vimrcEx
     \ if line("'\"") > 0 && line("'\"") <= line("$") |
     \ exe "normal g`\"" |
     \ endif
-        
+
     "for ruby, autoindent with two spaces, always expand tabs
     autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,cucumber set ai sw=2 sts=2 et
 
@@ -112,7 +112,7 @@ autocmd FileType gitcommit setlocal spell textwidth=72
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "set guioptions-=T
 set t_Co=256 " 256 colors
-colorscheme mango 
+colorscheme mango
 set background=dark
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -160,7 +160,7 @@ nnoremap <leader><leader> <c-^>
 " Find and Replace Highlighted Word with <C-r>
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
-" Move around in panes 
+" Move around in panes
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
@@ -210,7 +210,7 @@ if executable('ag')
         \ --ignore .hg
         \ --ignore .DS_Store
         \ --ignore node_modules
-        \ --ignore images 
+        \ --ignore images
         \ -g ""'
 endif
 
@@ -249,5 +249,31 @@ let g:jsx_ext_required = 0
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " net-rw
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>k :Vex<cr>
+map <leader>o :Vex<cr>
 let g:netrw_liststyle=3
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" White-space trimming
+" http://vim.wikia.com/wiki/Remove_unwanted_spaces
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function ShowSpaces(...)
+  let @/='\v(\s+$)|( +\ze\t)'
+  let oldhlsearch=&hlsearch
+  if !a:0
+    let &hlsearch=!&hlsearch
+  else
+    let &hlsearch=a:1
+  end
+  return oldhlsearch
+endfunction
+
+function TrimSpaces() range
+  let oldhlsearch=ShowSpaces(1)
+  execute a:firstline.",".a:lastline."substitute ///gec"
+  let &hlsearch=oldhlsearch
+endfunction
+
+command -bar -nargs=? ShowSpaces call ShowSpaces(<args>)
+command -bar -nargs=0 -range=% TrimSpaces <line1>,<line2>call TrimSpaces()
+map <leader>sts :ShowSpaces 1<cr>
+map <leader>dts :TrimSpaces<cr>
