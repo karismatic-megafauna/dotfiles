@@ -36,5 +36,8 @@ export NVM_DIR="/home/vagrant/.nvm"
 export RBENV_ROOT="/usr/local/rbenv"
 eval "$(rbenv init - )"
 
+# use overcommit on all git repos
+export GIT_TEMPLATE_DIR=`overcommit --template-dir`
+
 # ssh
  SSH_KEY_PATH="~/.ssh/dsa_id"
