@@ -25,6 +25,8 @@ alias pcom="cd ~/procore/app/assets/javascripts/react_components/procore_compone
 alias rs="bin/rails s -b 0.0.0.0"
 alias bs="bin/rails s -b 0.0.0.0 | grep -E 'GET|POST|Rendered|Listening|scss'"
 alias g="git"
+alias gw="gulp watch"
+alias gd="gulp dev"
 
 # Bundler
 alias be="bundle exec"
