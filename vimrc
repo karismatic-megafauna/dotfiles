@@ -159,6 +159,7 @@ nnoremap <leader><leader> <c-^>
 
 " Find and Replace Highlighted Word with <C-r>
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+nmap <leader>w :%s/\(<c-r>=expand("<cword>")<cr>\)/
 
 " Move around in panes
 map <C-j> <C-W>j
@@ -173,7 +174,6 @@ map <leader>H :bp<cr>
 " Use the arrows to something usefull
 map <right> :bn<cr>
 map <left> :bp<cr>
-
 
 " Control-C to return to Command Mode
 imap <c-c> <esc>
