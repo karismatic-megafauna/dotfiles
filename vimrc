@@ -159,7 +159,7 @@ nnoremap <leader><leader> <c-^>
 
 " Find and Replace Highlighted Word with <C-r>
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
-nmap <leader>w :%s/\(<c-r>=expand("<cword>")<cr>\)/
+nmap <leader>W :%s/\(<c-r>=expand("<cword>")<cr>\)/
 
 " Move around in panes
 map <C-j> <C-W>j
