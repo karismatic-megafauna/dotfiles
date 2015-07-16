@@ -71,6 +71,11 @@ cpdb()
     cp ~/.database_configs/database_office.yml ~/$dir/config/database.yml
     echo "now using your [office] database file in the [$dir] directory"
   else
-    echo "specify either [-l] or [-o], to change database file"
+  elif [ $1 == '-r' ]; then
+    cp ~/.database_configs/database_remote_office.yml ~/$dir/config/database.yml
+    echo "now using your [remote office] database file in the [$dir] directory"
+    echo "you will need to run `ssh db2.office.procore` to set this up"
+  else
+    echo "specify [-l], [-r] or [-o], to change database file"
   fi
 }
