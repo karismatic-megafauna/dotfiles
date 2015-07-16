@@ -70,7 +70,6 @@ cpdb()
   elif [ $1 == '-o' ]; then
     cp ~/.database_configs/database_office.yml ~/$dir/config/database.yml
     echo "now using your [office] database file in the [$dir] directory"
-  else
   elif [ $1 == '-r' ]; then
     cp ~/.database_configs/database_remote_office.yml ~/$dir/config/database.yml
     echo "now using your [remote office] database file in the [$dir] directory"
