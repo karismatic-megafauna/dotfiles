@@ -71,6 +71,10 @@ let mapleader = " "
 " enable mouse usage
 " set mouse=a
 
+" Open new split panes to right and bottom, which feels more natural
+set splitbelow
+set splitright
+
 "ctags custom mappings
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <C-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
@@ -105,7 +109,9 @@ augroup vimrcEx
     autocmd BufRead, BufNewFile *.sass setfiletype sass
 augroup END
 
-autocmd FileType gitcommit setlocal spell textwidth=72
+" Spell checking and AutoCompleting
+autocmd FileType *.md,gitcommit setlocal spell textwidth=72
+set complete+=kspell
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COLOR
@@ -145,6 +151,9 @@ let g:airline_symbols.whitespace = 'Ξ'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MISC KEY MAPS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Toggle Paste
+set pastetoggle=<leader>p
+
 " Fast saving
 nmap <leader>w :w!<cr>
 
@@ -277,3 +286,22 @@ command -bar -nargs=? ShowSpaces call ShowSpaces(<args>)
 command -bar -nargs=0 -range=% TrimSpaces <line1>,<line2>call TrimSpaces()
 map <leader>sts :ShowSpaces 1<cr>
 map <leader>dts :TrimSpaces<cr>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Folding
+" http://stackoverflow.com/questions/4789605/how-do-i-enable-automatic-folds-in-vim
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set foldmethod=syntax
+set foldlevelstart=1
+
+let javaScript_fold=1         " JavaScript
+let perl_fold=1               " Perl
+let php_folding=1             " PHP
+let r_syntax_folding=1        " R
+let ruby_fold=1               " Ruby
+let sh_fold_enabled=1         " sh
+let vimsyn_folding='af'       " Vim script
+let xml_syntax_folding=1      " XML
+
+" Folding for SCSS
+autocmd BufRead,BufNewFile *.css,*.scss,*.less setlocal foldmethod=marker foldmarker={,}
