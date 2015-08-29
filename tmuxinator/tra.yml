@@ -25,14 +25,14 @@ tmux_options: -2
 
 windows:
   - servers:
-      layout: tiled 
+      layout: tiled
       panes:
-        - frank:
-          - cd ~/procore/frontend && ggpull && gulp dev
-        - dave:
-          - cd ~/procore && ggpull && bs
-        - ricky:
-          - cd ~/ProcoreComponents && ggpull && gulp watch
-        - martin:
-          - cd ~/react-dataloader && ggpull && gulp watch
+        - node:
+          - cd ~/procore/frontend
+        - rails:
+          - cd ~/procore
+        - components:
+          - cd ~/ProcoreComponents && git co . && git pull
+        - dataloader:
+          - cd ~/react-dataloader && git co . && git pull
   - editor: cd ~/procore/frontend && vim

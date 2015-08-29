@@ -166,6 +166,9 @@ nnoremap <leader>qq :q<cr>
 " Switch back to previous file
 nnoremap <leader><leader> <c-^>
 
+" use K to do the opposite of J
+nnoremap K i<CR><Esc>
+
 " Find and Replace Highlighted Word with <C-r>
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 nmap <leader>W :%s/\(<c-r>=expand("<cword>")<cr>\)/
@@ -180,7 +183,7 @@ map <C-l> <C-W>l
 map <leader>L :bn<cr>
 map <leader>H :bp<cr>
 
-" Use the arrows to something usefull
+" Use the arrows to switch buffers
 map <right> :bn<cr>
 map <left> :bp<cr>
 
