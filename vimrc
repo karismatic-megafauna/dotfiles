@@ -1,4 +1,3 @@
-
 " Michael Hinrich's vimrc, forked from -
 " Michael Stock's vimrc -- http://github.com/mikeastock/dotfiles
 " Last updated 01/27/2014
@@ -61,7 +60,9 @@ syntax on
 " Use the default filetype settings, so that mail gets 'tw' set to 72,
 " 'cindent' is on in C files, etc.
 " Also load indent files, to automatically do language-dependent indenting.
+filetype plugin on
 filetype plugin indent on
+
 " use emacs-style tab completion when selecting files, etc
 set wildmode=longest,list
 " make tab completion for files/buffers act like bash
@@ -110,7 +111,8 @@ augroup vimrcEx
 augroup END
 
 " Spell checking and AutoCompleting
-autocmd FileType *.md,gitcommit setlocal spell textwidth=72
+autocmd FileType gitcommit setlocal spell textwidth=72
+autocmd BufRead,BufNewFile *.md setlocal spell
 set complete+=kspell
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -308,3 +310,6 @@ let xml_syntax_folding=1      " XML
 
 " Folding for SCSS
 autocmd BufRead,BufNewFile *.css,*.scss,*.less setlocal foldmethod=marker foldmarker={,}
+
+" Folding for JS
+autocmd FileType javascript call JavaScriptFold()
