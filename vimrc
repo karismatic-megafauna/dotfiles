@@ -312,4 +312,4 @@ let xml_syntax_folding=1      " XML
 autocmd BufRead,BufNewFile *.css,*.scss,*.less setlocal foldmethod=marker foldmarker={,}
 
 " Folding for JS
-autocmd FileType javascript call JavaScriptFold()
+au FileType javascript call JavaScriptFold()
