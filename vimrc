@@ -1,6 +1,4 @@
-" Michael Hinrich's vimrc, forked from -
-" Michael Stock's vimrc -- http://github.com/mikeastock/dotfiles
-" Last updated 01/27/2014
+" Michael Hinrich's vimrc
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VUNDLE
@@ -70,7 +68,7 @@ set wildmenu
 let mapleader = " "
 
 " enable mouse usage
-" set mouse=a
+set mouse=a
 
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
@@ -80,18 +78,11 @@ set splitright
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <C-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
-"vim ruby commands
-imap <S-CR> <CR><CR>end<Esc>-cc
-
 " Start interactive EasyAlign in visual mode
 vmap <Enter> <Plug>(EasyAlign)
 "
 " Start interactive EasyAlign with a Vim movement
 nmap <Leader>a <Plug>(EasyAlign)
-
-" Resize panes
-nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
-nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CUSTOM AUTOCMDS
@@ -153,9 +144,6 @@ let g:airline_symbols.whitespace = 'Ξ'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MISC KEY MAPS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Toggle Paste
-set pastetoggle=<leader>p
-
 " Fast saving
 nmap <leader>w :w!<cr>
 
@@ -182,12 +170,14 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 " EXPERIMENTAL move through buffers from home
-map <leader>L :bn<cr>
-map <leader>H :bp<cr>
+map <leader>l :bn<CR>
+map <leader>h :bp<CR>
 
-" Use the arrows to switch buffers
-map <right> :bn<cr>
-map <left> :bp<cr>
+" Get off my lawn
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
 
 " Control-C to return to Command Mode
 imap <c-c> <esc>
@@ -235,9 +225,8 @@ let g:ctrlp_max_height = 30
 map <leader>gv :CtrlP app/views<cr>
 map <leader>gh :CtrlP app/helpers<cr>
 map <leader>ga :CtrlP app/assets<cr>
-map <leader>gp :CtrlP config<cr>
 map <leader>f :CtrlP frontend<cr>
-map <leader>b :CtrlPBuffer<cr>
+map <leader>s :CtrlP app/assets/stylesheets<cr>
 let g:CtrlMaxFiles=40000
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

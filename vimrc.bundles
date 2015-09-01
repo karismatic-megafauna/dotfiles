@@ -10,7 +10,6 @@ Bundle 'gmarik/vundle'
 "misc
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'kien/ctrlp.vim'
-Bundle 'airblade/vim-gitgutter'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'junegunn/vim-easy-align'
 Bundle 'rking/ag.vim'
