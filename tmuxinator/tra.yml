@@ -28,11 +28,11 @@ windows:
       layout: tiled
       panes:
         - node:
-          - cd ~/procore/frontend
+          - cd ~/procore/frontend && npm install
         - rails:
-          - cd ~/procore
+          - cd ~/procore && ggpull
         - components:
           - cd ~/ProcoreComponents && git co . && git pull
         - dataloader:
           - cd ~/react-dataloader && git co . && git pull
-  - editor: cd ~/procore/frontend && vim
+  - editor: cd ~/procore && vim
