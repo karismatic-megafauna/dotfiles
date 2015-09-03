@@ -12,6 +12,9 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set encoding=utf-8
 
+" No sql shit
+let g:omni_sql_no_default_maps = 1
+
 " allow unsaved background buffers and remember marks/undo for them
 set hidden
 
@@ -84,7 +87,7 @@ set wildmenu
 let mapleader = " "
 
 " enable mouse usage
-set mouse=a
+" set mouse=a
 
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
