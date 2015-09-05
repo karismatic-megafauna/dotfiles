@@ -23,14 +23,14 @@ tmux_options: -2
 
 windows:
   - dotfiles:
-      layout: tiled
+      layout: even-horizontal
       panes:
         - root:
           - cd ~/.dotfiles && git pull origin master
         - aliases:
           - vim ~/.dotfiles/aliases
   - vimrc: 
-      layout: tiled
+      layout: even-horizontal
       panes:
         - vimrc:
           - vim ~/.dotfiles/vimrc
