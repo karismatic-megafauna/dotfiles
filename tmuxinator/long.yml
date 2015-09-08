@@ -1,4 +1,4 @@
-name: tra
+name: long 
 root: ~/
 
 # Optional tmux socket
@@ -29,6 +29,9 @@ windows:
           - cd ~/procore/frontend && npm install
         - rails:
           - cd ~/procore && ggpull
+  - servers:
+      layout: tiled
+      panes:
         - components:
           - cd ~/ProcoreComponents && git co . && git pull
         - dataloader:

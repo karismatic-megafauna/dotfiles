@@ -1,4 +1,4 @@
-name: tra
+name: dot 
 root: ~/
 
 # Optional tmux socket
@@ -22,15 +22,17 @@ tmux_options: -2
 # startup_window: logs
 
 windows:
-  - servers:
-      layout: tiled
+  - dotfiles:
+      layout: even-horizontal
       panes:
-        - node:
-          - cd ~/procore/frontend && npm install
-        - rails:
-          - cd ~/procore && ggpull
-        - components:
-          - cd ~/ProcoreComponents && git co . && git pull
-        - dataloader:
-          - cd ~/react-dataloader && git co . && git pull
-  - editor: cd ~/procore && vim
+        - root:
+          - cd ~/.dotfiles && git pull origin master
+        - aliases:
+          - vim ~/.dotfiles/aliases
+  - vimrc: 
+      layout: even-horizontal
+      panes:
+        - vimrc:
+          - vim ~/.dotfiles/vimrc
+        - vundle:
+          - vim ~/.dotfiles/vimrc.bundles
