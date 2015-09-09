@@ -1,4 +1,4 @@
-" Michael Hinrich's vimrc
+" Michael Hinrichs' vimrc
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VUNDLE
