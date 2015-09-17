@@ -246,6 +246,9 @@ map <leader>f :CtrlP frontend<cr>
 map <leader>s :CtrlP app/assets/stylesheets<cr>
 let g:CtrlMaxFiles=40000
 
+"fzf
+set rtp+=~/.fzf
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files and backups
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

@@ -18,3 +18,5 @@ if [ -s ~/.nvm/nvm.sh ]; then
 	NVM_DIR=~/.nvm
 	source ~/.nvm/nvm.sh
 fi
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

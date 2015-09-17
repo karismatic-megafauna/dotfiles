@@ -41,3 +41,5 @@ export GIT_TEMPLATE_DIR=`overcommit --template-dir`
 
 # ssh
  SSH_KEY_PATH="~/.ssh/dsa_id"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
