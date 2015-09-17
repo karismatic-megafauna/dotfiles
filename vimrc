@@ -235,7 +235,7 @@ if executable('ag')
         \ -g ""'
 endif
 
-" let g:ctrlp_working_path_mode = 'rc'
+let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_max_height = 30
 " let g:ctrlp_working_path_mode = 0
 
