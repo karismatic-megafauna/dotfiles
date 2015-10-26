@@ -323,8 +323,8 @@ map <leader>dts :TrimSpaces<cr>
 " Folding
 " http://stackoverflow.com/questions/4789605/how-do-i-enable-automatic-folds-in-vim
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set foldmethod=syntax
-set foldlevelstart=1
+" set foldmethod=syntax
+" set foldlevelstart=1
 
 " let javaScript_fold=1         " JavaScript
 " let perl_fold=1               " Perl
