@@ -1,3 +1,11 @@
+######################
+# Include other directories
+######################
+
+DIR="${BASH_SOURCE%/*}"
+if [[ ! -d "$DIR" ]]; then DIR="$PWD"; fi
+. "$DIR/.functions.sh"
+
 ###########
 # aliases #
 ###########
