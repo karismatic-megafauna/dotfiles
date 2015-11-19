@@ -292,6 +292,7 @@ function! ToggleVExplorer()
   endif
 endfunction
 map <silent> <C-E> :call ToggleVExplorer()<CR>
+let g:netrw_preview = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " White-space trimming
