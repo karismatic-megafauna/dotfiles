@@ -1,11 +1,1 @@
-{
-  "extends": "airbnb",
-  "ecmaFeatures": {
-    "modules": true
-  },
-  "rules": {
-    "react/jsx-boolean-value": 0,
-    "new-cap": 0,
-    "id-length": 0
-  }
-}
+

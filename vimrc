@@ -341,3 +341,8 @@ map <leader>dts :TrimSpaces<cr>
 
 " Folding for JS
 "au FileType javascript call JavaScriptFold()
+"
+
+" TODO: Orgainze this stuff
+autocmd FileType gitcommit call setpos('.', [0, 1, 1, 0])
+map <leader>t :!npm t<cr>
