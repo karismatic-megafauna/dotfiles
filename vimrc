@@ -344,5 +344,6 @@ map <leader>dts :TrimSpaces<cr>
 "
 
 " TODO: Orgainze this stuff
+" TODO: the below autocmd is not working, still experiencing weirdness
 autocmd FileType gitcommit call setpos('.', [0, 1, 1, 0])
 map <leader>t :!npm t<cr>
