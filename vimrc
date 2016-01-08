@@ -346,4 +346,5 @@ map <leader>dts :TrimSpaces<cr>
 " TODO: Orgainze this stuff
 " TODO: the below autocmd is not working, still experiencing weirdness
 autocmd FileType gitcommit call setpos('.', [0, 1, 1, 0])
+au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 map <leader>t :!npm t<cr>
