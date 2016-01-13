@@ -1,39 +1,38 @@
 set nocompatible
-
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#rc()
 
-" Let Vundle manage Vundle
-Bundle 'gmarik/vundle'
+call plug#begin()
 
 " Syntax Highlighting
-" Bundle 'jelera/vim-javascript-syntax'
-Bundle 'mxw/vim-jsx'
-Bundle 'othree/html5.vim'
-" Bundle 'pangloss/vim-javascript'
+" Plug 'jelera/vim-javascript-syntax'
+Plug 'mxw/vim-jsx'
+Plug 'othree/html5.vim'
+" Plug 'pangloss/vim-javascript'
 
 " Shell Util
-Bundle 'bling/vim-airline'
-Bundle 'bling/vim-bufferline'
-Bundle 'edkolev/tmuxline.vim'
-Bundle 'rking/ag.vim'
-Bundle 'tpope/vim-fugitive'
+Plug 'bling/vim-airline'
+Plug 'bling/vim-bufferline'
+Plug 'edkolev/tmuxline.vim'
+Plug 'rking/ag.vim'
+Plug 'tpope/vim-fugitive'
 
 " Editor Util
-Bundle 'bronson/vim-trailing-whitespace'
-Bundle 'ervandew/supertab'
-Bundle 'junegunn/vim-easy-align'
-Bundle 'kien/ctrlp.vim'
-Bundle 'mcasper/vim-infer-debugger'
-Bundle 'moll/vim-node'
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'tpope/vim-commentary'
-Bundle 'tpope/vim-surround'
+Plug 'bronson/vim-trailing-whitespace'
+Plug 'ervandew/supertab'
+Plug 'junegunn/vim-easy-align'
+Plug 'kien/ctrlp.vim'
+Plug 'mcasper/vim-infer-debugger'
+Plug 'moll/vim-node'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
 
 "misc
-" Bundle 'Raimondi/delimitMate'
-Bundle 'scrooloose/syntastic'
+" Plug 'Raimondi/delimitMate'
+Plug 'scrooloose/syntastic'
 
 "colors
-Bundle 'flazz/vim-colorschemes'
+Plug 'flazz/vim-colorschemes'
+
+call plug#end()
+filetype plugin indent on

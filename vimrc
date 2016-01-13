@@ -1,7 +1,7 @@
 " Michael Hinrichs' vimrc
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" VUNDLE
+" vim.plug
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
