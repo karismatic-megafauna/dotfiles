@@ -30,9 +30,11 @@ Plug 'tpope/vim-surround'
 "misc
 " Plug 'Raimondi/delimitMate'
 Plug 'scrooloose/syntastic'
+Plug 'xolox/vim-misc'
 
 "colors
 Plug 'flazz/vim-colorschemes'
+Plug 'xolox/vim-colorscheme-switcher'
 
 call plug#end()
 filetype plugin indent on

@@ -128,7 +128,7 @@ set complete+=kspell
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "set guioptions-=T
 set t_Co=256 " 256 colors
-colorscheme sorcerer
+autocmd VimEnter * RandomColorScheme
 set background=dark
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
