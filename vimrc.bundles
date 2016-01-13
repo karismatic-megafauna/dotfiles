@@ -17,6 +17,7 @@ Plug 'rking/ag.vim'
 Plug 'tpope/vim-fugitive'
 
 " Editor Util
+Plug 'scrooloose/nerdtree'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'ervandew/supertab'
 Plug 'junegunn/vim-easy-align'

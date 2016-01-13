@@ -11,6 +11,7 @@ endif
 " BASIC EDITING CONFIGURATION
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set encoding=utf-8
+let mapleader = " "
 
 " No sql shit
 let g:omni_sql_no_default_maps = 1
@@ -48,9 +49,6 @@ set winwidth=90
 set tags=tags;/
 set colorcolumn=80
 
-" No gitgutter mappings
-let g:gitgutter_map_keys = 0
-
 " Prevent Vim from clobbering the scrollback buffer. See
 " http://www.shallowsky.com/linux/noaltscreen.html
 set t_ti= t_te=
@@ -82,7 +80,6 @@ set wildmode=longest,list
 
 " make tab completion for files/buffers act like bash
 set wildmenu
-let mapleader = " "
 
 " enable mouse usage
 " set mouse=a
@@ -134,29 +131,29 @@ set background=dark
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Airline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:airline_theme = 'wombat'
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tmuxline#enabled = 1
-" let g:airline_powerline_fonts = 1
-let g:bufferline_echo = 0
+" let g:airline_theme = 'wombat'
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tmuxline#enabled = 1
+" " let g:airline_powerline_fonts = 1
+" let g:bufferline_echo = 0
 
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
+" if !exists('g:airline_symbols')
+"     let g:airline_symbols = {}
+" endif
 
-" unicode symbols
-let g:airline_left_sep = '»'
-let g:airline_left_sep = '▶'
-let g:airline_right_sep = '«'
-let g:airline_right_sep = '◀'
-let g:airline_symbols.linenr = '␊'
-let g:airline_symbols.linenr = '␤'
-let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.branch = '⎇'
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.paste = 'Þ'
-let g:airline_symbols.paste = '∥'
-let g:airline_symbols.whitespace = 'Ξ'
+" " unicode symbols
+" let g:airline_left_sep = '»'
+" let g:airline_left_sep = '▶'
+" let g:airline_right_sep = '«'
+" let g:airline_right_sep = '◀'
+" let g:airline_symbols.linenr = '␊'
+" let g:airline_symbols.linenr = '␤'
+" let g:airline_symbols.linenr = '¶'
+" let g:airline_symbols.branch = '⎇'
+" let g:airline_symbols.paste = 'ρ'
+" let g:airline_symbols.paste = 'Þ'
+" let g:airline_symbols.paste = '∥'
+" let g:airline_symbols.whitespace = 'Ξ'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MISC KEY MAPS
@@ -189,12 +186,6 @@ map <C-l> <C-W>l
 " EXPERIMENTAL move through buffers from home
 map <leader>l :bn<CR>
 map <leader>h :bp<CR>
-
-" Get off my lawn
-nnoremap <Left> :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up> :echoe "Use k"<CR>
-nnoremap <Down> :echoe "Use j"<CR>
 
 " Control-C to return to Command Mode
 imap <c-c> <esc>
@@ -235,15 +226,10 @@ if executable('ag')
         \ -g ""'
 endif
 
+" let g:ctrlp_working_path_mode = 0
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_max_height = 30
-" let g:ctrlp_working_path_mode = 0
 
-map <leader>gv :CtrlP app/views<cr>
-map <leader>gh :CtrlP app/helpers<cr>
-map <leader>ga :CtrlP app/assets<cr>
-map <leader>f :CtrlP frontend<cr>
-map <leader>s :CtrlP app/assets/stylesheets<cr>
 let g:CtrlMaxFiles=40000
 
 "fzf
@@ -270,29 +256,19 @@ let g:syntastic_javascript_checkers = ['eslint']
 let g:jsx_ext_required = 0
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" net-rw
+" Nerd Tree
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Toggle Vexplore with Ctrl-E
-function! ToggleVExplorer()
-  if exists("t:expl_buf_num")
-      let expl_win_num = bufwinnr(t:expl_buf_num)
-      if expl_win_num != -1
-          let cur_win_nr = winnr()
-          exec expl_win_num . 'wincmd w'
-          close
-          exec cur_win_nr . 'wincmd w'
-          unlet t:expl_buf_num
-      else
-          unlet t:expl_buf_num
-      endif
-  else
-      exec '1wincmd w'
-      Vexplore
-      let t:expl_buf_num = bufnr("%")
-  endif
-endfunction
-map <silent> <C-E> :call ToggleVExplorer()<CR>
-let g:netrw_preview = 1
+" Add control slash and command slash (like atom) to collapse and expand
+map <C-n> :NERDTreeToggle<CR>
+map <D-n> :NERDTreeToggle<CR>
+
+" change default arrows
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+
+"close NERDTree if it is only window left open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Folding
