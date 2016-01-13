@@ -295,32 +295,6 @@ map <silent> <C-E> :call ToggleVExplorer()<CR>
 let g:netrw_preview = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" White-space trimming
-" http://vim.wikia.com/wiki/Remove_unwanted_spaces
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-function ShowSpaces(...)
-  let @/='\v(\s+$)|( +\ze\t)'
-  let oldhlsearch=&hlsearch
-  if !a:0
-    let &hlsearch=!&hlsearch
-  else
-    let &hlsearch=a:1
-  end
-  return oldhlsearch
-endfunction
-
-function TrimSpaces() range
-  let oldhlsearch=ShowSpaces(1)
-  execute a:firstline.",".a:lastline."substitute ///gec"
-  let &hlsearch=oldhlsearch
-endfunction
-
-command -bar -nargs=? ShowSpaces call ShowSpaces(<args>)
-command -bar -nargs=0 -range=% TrimSpaces <line1>,<line2>call TrimSpaces()
-map <leader>sts :ShowSpaces 1<cr>
-map <leader>dts :TrimSpaces<cr>
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Folding
 " http://stackoverflow.com/questions/4789605/how-do-i-enable-automatic-folds-in-vim
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
