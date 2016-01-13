@@ -128,7 +128,7 @@ set complete+=kspell
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "set guioptions-=T
 set t_Co=256 " 256 colors
-colorscheme mango
+colorscheme sorcerer
 set background=dark
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -177,8 +177,8 @@ nnoremap <leader><leader> <c-^>
 nnoremap K i<CR><Esc>
 
 " Find and Replace Highlighted Word with <C-r>
-vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
-nmap <leader>W :%s/\(<c-r>=expand("<cword>")<cr>\)/
+" vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+" nmap <leader>W :%s/\(<c-r>=expand("<cword>")<cr>\)/
 
 " Move around in panes
 map <C-j> <C-W>j
@@ -298,24 +298,6 @@ let g:netrw_preview = 1
 " Folding
 " http://stackoverflow.com/questions/4789605/how-do-i-enable-automatic-folds-in-vim
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" set foldmethod=syntax
-" set foldlevelstart=1
-
-" let javaScript_fold=1         " JavaScript
-" let perl_fold=1               " Perl
-" let php_folding=1             " PHP
-" let r_syntax_folding=1        " R
-" let ruby_fold=1               " Ruby
-" let sh_fold_enabled=1         " sh
-" let vimsyn_folding='af'       " Vim script
-" let xml_syntax_folding=1      " XML
-
-" Folding for SCSS
-" autocmd BufRead,BufNewFile *.css,*.scss,*.less setlocal foldmethod=marker foldmarker={,}
-
-" Folding for JS
-"au FileType javascript call JavaScriptFold()
-"
 
 " TODO: Orgainze this stuff
 " TODO: the below autocmd is not working, still experiencing weirdness
