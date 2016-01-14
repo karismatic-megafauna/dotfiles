@@ -47,7 +47,6 @@ set numberwidth=6
 set showtabline=2
 set winwidth=90
 set tags=tags;/
-set colorcolumn=80
 
 " Prevent Vim from clobbering the scrollback buffer. See
 " http://www.shallowsky.com/linux/noaltscreen.html
@@ -125,6 +124,8 @@ set complete+=kspell
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "set guioptions-=T
 set t_Co=256 " 256 colors
+set colorcolumn=80
+highlight ColorColumn ctermbg=DarkGrey
 autocmd VimEnter * RandomColorScheme
 set background=dark
 
@@ -274,6 +275,10 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " Folding
 " http://stackoverflow.com/questions/4789605/how-do-i-enable-automatic-folds-in-vim
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set foldmethod=syntax
+set foldlevelstart=1
+let javaScript_fold=1
+autocmd BufWinEnter * silent! :%foldopen!
 
 " TODO: Orgainze this stuff
 " TODO: the below autocmd is not working, still experiencing weirdness
