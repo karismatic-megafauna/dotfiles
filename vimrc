@@ -74,14 +74,14 @@ syntax on
 filetype plugin on
 filetype plugin indent on
 
+" set .md as markdown files for syntax highlighting
+au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+
 " use emacs-style tab completion when selecting files, etc
 set wildmode=longest,list
 
 " make tab completion for files/buffers act like bash
 set wildmenu
-
-" enable mouse usage
-" set mouse=a
 
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
@@ -94,7 +94,7 @@ map <C-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 " Start interactive EasyAlign in visual mode
 vmap <Enter> <Plug>(EasyAlign)
 "
-" Start interactive EasyAlign with a Vim movement
+" Start interactive EasyAlign with a Vim motion
 nmap <Leader>a <Plug>(EasyAlign)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -130,33 +130,6 @@ autocmd VimEnter * RandomColorScheme
 set background=dark
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Airline
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" let g:airline_theme = 'wombat'
-" let g:airline#extensions#tabline#enabled = 1
-" let g:airline#extensions#tmuxline#enabled = 1
-" " let g:airline_powerline_fonts = 1
-" let g:bufferline_echo = 0
-
-" if !exists('g:airline_symbols')
-"     let g:airline_symbols = {}
-" endif
-
-" " unicode symbols
-" let g:airline_left_sep = '»'
-" let g:airline_left_sep = '▶'
-" let g:airline_right_sep = '«'
-" let g:airline_right_sep = '◀'
-" let g:airline_symbols.linenr = '␊'
-" let g:airline_symbols.linenr = '␤'
-" let g:airline_symbols.linenr = '¶'
-" let g:airline_symbols.branch = '⎇'
-" let g:airline_symbols.paste = 'ρ'
-" let g:airline_symbols.paste = 'Þ'
-" let g:airline_symbols.paste = '∥'
-" let g:airline_symbols.whitespace = 'Ξ'
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MISC KEY MAPS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Fast saving
@@ -173,10 +146,6 @@ nnoremap <leader><leader> <c-^>
 
 " use K to do the opposite of J
 nnoremap K i<CR><Esc>
-
-" Find and Replace Highlighted Word with <C-r>
-" vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
-" nmap <leader>W :%s/\(<c-r>=expand("<cword>")<cr>\)/
 
 " Move around in panes
 map <C-j> <C-W>j
@@ -237,9 +206,9 @@ let g:CtrlMaxFiles=40000
 set rtp+=~/.fzf
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Files and backups
+" Files and backups
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Turn backup off, since most stuff is in SVN, git anyway...
+" Turn backup off, since most stuff is in SVN
 set nobackup
 set nowb
 set noswapfile
@@ -270,7 +239,6 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 "close NERDTree if it is only window left open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Folding
 " http://stackoverflow.com/questions/4789605/how-do-i-enable-automatic-folds-in-vim
@@ -280,8 +248,10 @@ set foldlevelstart=1
 let javaScript_fold=1
 autocmd BufWinEnter * silent! :%foldopen!
 
-" TODO: Orgainze this stuff
-" TODO: the below autocmd is not working, still experiencing weirdness
-autocmd FileType gitcommit call setpos('.', [0, 1, 1, 0])
-au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
-map <leader>t :!npm t<cr>
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Toggles
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" enable mouse usage
+" set mouse=a
+" autocmd FileType gitcommit call setpos('.', [0, 1, 1, 0])
+" map <leader>t :!npm t<cr>
