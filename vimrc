@@ -182,28 +182,9 @@ inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" CTRLP
+" FZF
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if executable('ag')
-  set grepprg=ag\ --nogroup\ --nocolor
-  let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
-        \ --ignore .git
-        \ --ignore .svn
-        \ --ignore .hg
-        \ --ignore .DS_Store
-        \ --ignore node_modules
-        \ --ignore images
-        \ -g ""'
-endif
-
-" let g:ctrlp_working_path_mode = 0
-let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_max_height = 30
-
-let g:CtrlMaxFiles=40000
-
-"fzf
-set rtp+=~/.fzf
+map <Leader>f :FZF<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Files and backups
