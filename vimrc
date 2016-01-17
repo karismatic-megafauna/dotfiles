@@ -87,9 +87,9 @@ set wildmenu
 set splitbelow
 set splitright
 
-"ctags custom mappings
-map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-map <C-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+""ctags custom mappings
+"map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+"map <C-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 " Start interactive EasyAlign in visual mode
 vmap <Enter> <Plug>(EasyAlign)
