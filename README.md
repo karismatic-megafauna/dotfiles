@@ -1,6 +1,6 @@
 # Welcome To my Dotfiles!
 
-Aspiring to use a barebones vim + tmux + fzf + ag setup on OSX, only extending where it makes sense!
+Aspiring to use a barebones `vim + tmux + fzf + ag` setup on OSX, only extending where it makes sense!
 
 ### Some cool things I like about my dotfiles:
 
