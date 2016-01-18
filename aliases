@@ -2,7 +2,17 @@
 # aliases #
 ###########
 
-# Unix
+# general
+alias cp='cp -iv'
+alias mkdir='mkdir -v'
+alias ls='ls -hF --color=auto'
+alias mv='mv -iv'
+alias ln='ln -v'
+alias rm='rm -Iv'
+alias g='grep -Irisn --color=auto'
+alias p='ps -a'
+alias back='cd -'
+alias path='pretty_path'
 alias e="$EDITOR"
 alias v="$VISUAL"
 alias sz="source ~/.zshrc"
@@ -10,6 +20,11 @@ alias puma start="puma -p 3000"
 
 # Tmux
 alias tmux="tmux -2"
+
+# rcm
+alias rcup='rcup -v'
+alias rcdn='rcdn -v'
+alias mkrc='mkrc -v'
 
 #############
 # functions #
