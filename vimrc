@@ -119,6 +119,9 @@ autocmd FileType gitcommit setlocal spell textwidth=72
 autocmd BufRead,BufNewFile *.md setlocal spell
 set complete+=kspell
 
+" Save current color to file
+command SaveCurrentColor execute ":redir >> cool-colors.txt | echo g:colors_name | redir END"
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COLOR
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
