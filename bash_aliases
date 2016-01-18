@@ -1,17 +1,16 @@
-alias dir='dir --color=auto'
-alias vdir='vdir --color=auto'
-alias cls='clear'
+# general
+alias cp='cp -iv'
+alias mkdir='mkdir -v'
+alias ls='ls -hF --color=auto'
+alias mv='mv -iv'
+alias ln='ln -v'
+alias rm='rm -Iv'
+alias g='grep -Irisn --color=auto'
+alias p='ps -a'
+alias back='cd -'
+alias path='pretty_path'
 
-#grep
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-
-#ls
-alias ll='ls -l'
-alias la='ls -A'
-alias l='ls -lah'
-
-#cd
-alias cd..='cd ..'
-alias ..='cd ..'
+# rcm
+alias rcup='rcup -v'
+alias rcdn='rcdn -v'
+alias mkrc='mkrc -v'
