@@ -1,5 +1,5 @@
 ###
-# oh-my-zsh configs 
+# oh-my-zsh configs
 ###
 
 export ZSH=$HOME/.oh-my-zsh
@@ -14,7 +14,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 ###
-# custom configs 
+# custom configs
 ###
 
 if [ -f /etc/profile ]; then
@@ -26,16 +26,18 @@ fi
 export VISUAL=vim
 export EDITOR=$VISUAL
 
-# aliases 
+# aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
+
+# NVM
+if [ -s ~/.nvm/nvm.sh ]; then
+	NVM_DIR=~/.nvm
+	source ~/.nvm/nvm.sh
+fi
 
 # paths
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="/usr/local/rbenv/bin:$PATH"
-
-# node version manager
-export NVM_DIR="/Users/georgemichael/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 # ruby version manager
 export RBENV_ROOT="/usr/local/rbenv"
@@ -47,4 +49,5 @@ export GIT_TEMPLATE_DIR=`overcommit --template-dir`
 # ssh
  SSH_KEY_PATH="~/.ssh/dsa_id"
 
+# FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
