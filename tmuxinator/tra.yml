@@ -26,11 +26,7 @@ windows:
       layout: tiled
       panes:
         - node:
-          - cd ~/procore/frontend && npm install
+          - cd ~/Code/Procore/wrench
         - rails:
-          - cd ~/procore && ggpull
-        - components:
-          - cd ~/ProcoreComponents && git co . && git pull
-        - dataloader:
-          - cd ~/react-dataloader && git co . && git pull
-  - editor: cd ~/procore && vim
+          - cd ~/Code/Procore/procore
+  - editor: cd ~/Code/Procore/wrench && vim
