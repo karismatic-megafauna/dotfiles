@@ -41,10 +41,8 @@ set cursorline
 set ruler
 set relativenumber
 set number
-set cmdheight=2
 set switchbuf=useopen
 set numberwidth=6
-set showtabline=2
 set winwidth=90
 set tags=tags;/
 
@@ -198,8 +196,11 @@ set nowb
 set noswapfile
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Linters
+" Linters / Syntastic
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" enable :lnext and :lprev
+let g:syntastic_always_populate_loc_list = 1
+
 "SCSS-lint
 let g:syntastic_scss_checkers = ['scss_lint']
 
@@ -235,7 +236,7 @@ autocmd BufWinEnter * silent! :%foldopen!
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Toggles
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" enable mouse usage
-" set mouse=a
+"" enable mouse usage
+set mouse=a
 " autocmd FileType gitcommit call setpos('.', [0, 1, 1, 0])
 " map <leader>t :!npm t<cr>

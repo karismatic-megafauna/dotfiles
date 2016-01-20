@@ -21,3 +21,6 @@ obsidian
 
 leo
 asu1dark
+mint
+babymate256
+luinnar
