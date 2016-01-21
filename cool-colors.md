@@ -24,3 +24,7 @@ asu1dark
 mint
 babymate256
 luinnar
+zazen
+graywh
+thor
+apprentice
