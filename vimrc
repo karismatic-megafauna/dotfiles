@@ -118,7 +118,7 @@ autocmd BufRead,BufNewFile *.md setlocal spell
 set complete+=kspell
 
 " Save current color to file
-command SaveCurrentColor execute ":redir >> ~/.dotfiles/cool-colors.md | echo g:colors_name | redir END"
+command SaveCurrentColor execute ":redir >> ~/.dotfiles/nice-colorschemes.md | echo g:colors_name | redir END"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COLOR
