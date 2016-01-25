@@ -148,12 +148,6 @@ nnoremap <leader><leader> <c-^>
 " use K to do the opposite of J
 nnoremap K i<CR><Esc>
 
-" Move around in panes
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
-
 " EXPERIMENTAL move through buffers from home
 map <leader>l :bn<CR>
 map <leader>h :bp<CR>

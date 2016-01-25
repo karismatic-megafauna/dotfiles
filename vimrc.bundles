@@ -27,6 +27,7 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'terryma/vim-multiple-cursors'
 
 "misc
 " Plug 'Raimondi/delimitMate'
