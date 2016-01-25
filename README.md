@@ -12,10 +12,10 @@ Aspiring to use a barebones `vim + tmux + fzf + ag` setup on OSX, only extending
  
 ### Things to know if you are snooping around:
 
-- Leader key for VIM is <Space>
-- Prefix for tmux is `Ctrl + a` (capslock + a)
+- Leader key for VIM is `<space>`
+- Prefix for tmux is `Ctrl + a`
 - I remap `capslock` to ctrl, this affects a lot of my motivation for custom key bindings
-- Movement and resizing in tmux try to emulate vim, this CAN be confusing ( sorry )! 
+- Movement and resizing in tmux try to emulate vim, this CAN be confusing 
 
 Feedback on what you think is silly, useless or could be better is much appreciated. Make an issue!!!
 
