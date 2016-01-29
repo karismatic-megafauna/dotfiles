@@ -41,3 +41,5 @@ vj
 twitchy
 skittles_dark
 gor
+jellyx
+peachpuff
