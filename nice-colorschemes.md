@@ -43,3 +43,5 @@ skittles_dark
 gor
 jellyx
 peachpuff
+ir_black
+busybee
