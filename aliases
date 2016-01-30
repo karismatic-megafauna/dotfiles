@@ -15,6 +15,7 @@ alias path='pretty_path'
 alias e="$EDITOR"
 alias v="$VISUAL"
 alias sz="source ~/.zshrc"
+alias tree="tree -I node_modules"
 
 # Tmux
 alias tmux="tmux -2"
