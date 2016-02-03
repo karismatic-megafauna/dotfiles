@@ -130,6 +130,14 @@ highlight ColorColumn ctermbg=DarkGrey
 autocmd VimEnter * RandomColorScheme
 set background=dark
 
+" When you just need a nice color
+nmap <leader>1 :colorscheme flatlandia<cr>
+nmap <leader>2 :colorscheme busybee<cr>
+nmap <leader>3 :colorscheme bvemu<cr>
+nmap <leader>4 :colorscheme apprentice<cr>
+nmap <leader>5 :colorscheme gotham256<cr>
+nmap <leader>6 :colorscheme iceberg<cr>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MISC KEY MAPS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

@@ -47,3 +47,7 @@ ir_black
 busybee
 
 flatlandia
+gotham256
+bubblegum
+ingretu
+bvemu
