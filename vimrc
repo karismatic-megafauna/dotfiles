@@ -35,7 +35,7 @@ set hlsearch
 set ignorecase smartcase
 
 " highlight current line
-set cursorline
+set nocursorline
 
 " Always show current position
 set ruler
@@ -118,7 +118,7 @@ autocmd BufRead,BufNewFile *.md setlocal spell
 set complete+=kspell
 
 " Save current color to file
-command SaveCurrentColor execute ":redir >> ~/.dotfiles/nice-colorschemes.md | echo g:colors_name | redir END"
+command! SaveCurrentColor execute ":redir >> ~/.dotfiles/nice-colorschemes.md | echo g:colors_name | redir END"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COLOR
@@ -126,9 +126,23 @@ command SaveCurrentColor execute ":redir >> ~/.dotfiles/nice-colorschemes.md | e
 "set guioptions-=T
 set t_Co=256 " 256 colors
 set colorcolumn=80
-highlight ColorColumn ctermbg=DarkGrey
-autocmd VimEnter * RandomColorScheme
-set background=dark
+colorscheme PaperColor
+" Fix Transparency
+hi Normal ctermbg=none
+hi NonText ctermbg=none
+
+" Line numbers
+hi LineNr ctermbg=none
+hi LineNr ctermfg=248
+
+" ColorColumn (80)
+hi ColorColumn ctermbg=234
+hi ColorColumn ctermfg=161
+
+" Colors for TODO/FIXME
+hi Todo cterm=bold
+hi Todo ctermbg=none
+hi Todo ctermfg=200
 
 " When you just need a nice color
 nmap <leader>1 :colorscheme flatlandia<cr>
@@ -165,7 +179,7 @@ imap <c-c> <esc>
 
 " Clear the search buffer when hitting return
 function! MapCR()
-    nnoremap <cr> :nohlsearch<cr>
+    nnoremap <cr> :nohlsearch<cr><cr>
 endfunction
 call MapCR()
 
