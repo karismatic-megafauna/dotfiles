@@ -12,7 +12,6 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set encoding=utf-8
 let mapleader = " "
-
 " No sql shit
 let g:omni_sql_no_default_maps = 1
 
@@ -126,23 +125,25 @@ command! SaveCurrentColor execute ":redir >> ~/.dotfiles/nice-colorschemes.md | 
 "set guioptions-=T
 set t_Co=256 " 256 colors
 set colorcolumn=80
+set background=dark
 colorscheme PaperColor
-" Fix Transparency
-hi Normal ctermbg=none
-hi NonText ctermbg=none
 
-" Line numbers
-hi LineNr ctermbg=none
-hi LineNr ctermfg=248
+" " Fix Transparency
+" hi Normal ctermbg=none
+" hi NonText ctermbg=none
 
-" ColorColumn (80)
-hi ColorColumn ctermbg=234
-hi ColorColumn ctermfg=161
+" " Line numbers
+" hi LineNr ctermbg=none
+" hi LineNr ctermfg=248
 
-" Colors for TODO/FIXME
-hi Todo cterm=bold
-hi Todo ctermbg=none
-hi Todo ctermfg=200
+" " ColorColumn (80)
+" hi ColorColumn ctermbg=234
+" hi ColorColumn ctermfg=161
+
+" " Colors for TODO/FIXME
+" hi Todo cterm=bold
+" hi Todo ctermbg=none
+" hi Todo ctermfg=200
 
 " When you just need a nice color
 nmap <leader>1 :colorscheme flatlandia<cr>
@@ -262,7 +263,7 @@ autocmd BufWinEnter * silent! :%foldopen!
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Toggles
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"" enable mouse usage
+" enable mouse usage
 set mouse=a
 " autocmd FileType gitcommit call setpos('.', [0, 1, 1, 0])
 " map <leader>t :!npm t<cr>

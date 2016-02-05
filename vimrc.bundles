@@ -16,8 +16,8 @@ Plug 'tpope/vim-fugitive'
 " Editor Util
 Plug 'scrooloose/nerdtree'
 Plug 'bronson/vim-trailing-whitespace'
-Plug 'ervandew/supertab'
 Plug 'junegunn/vim-easy-align'
+Plug 'ervandew/supertab'
 Plug 'mcasper/vim-infer-debugger'
 Plug 'moll/vim-node'
 Plug 'nathanaelkane/vim-indent-guides'
@@ -27,14 +27,12 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'terryma/vim-multiple-cursors'
 Plug 'elzr/vim-json'
 
-
-"misc
-" Plug 'Raimondi/delimitMate'
+" Misc
 Plug 'scrooloose/syntastic'
 Plug 'xolox/vim-misc'
 
-"colors
-Plug 'flazz/vim-colorschemes'
+" Colors
+" Plug 'flazz/vim-colorschemes'
 Plug 'xolox/vim-colorscheme-switcher'
 Plug 'NLKNguyen/papercolor-theme'
 
