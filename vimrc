@@ -89,10 +89,10 @@ set splitright
 "map <C-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 " Start interactive EasyAlign in visual mode
-vmap <Enter> <Plug>(EasyAlign)
-"
-" Start interactive EasyAlign with a Vim motion
-nmap <Leader>a <Plug>(EasyAlign)
+" vmap <Enter> <Plug>(EasyAlign)
+
+" " Start interactive EasyAlign with a Vim motion
+" nmap <Leader>a <Plug>(EasyAlign)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CUSTOM AUTOCMDS
