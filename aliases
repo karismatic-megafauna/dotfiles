@@ -30,9 +30,20 @@ alias mkrc='mkrc -v'
 # functions #
 #############
 
-# copy the database yml and paste it in your config
 cpdb()
 {
+  # SETUP:
+  # `mkdir ~/.database_configs`
+  # `touch database_local.yml database_office.yml database_remote_office.yml`
+  # each of these should have to correct configs
+  #
+  # USAGE:
+  # on your virtual machine do this:
+  # cpdb -l for you own local setup
+  # cpdb -r for remote office (then ssh in)
+  # cpdb -o for the office db while in the office
+  #
+  # Enjoy!
   #find all places where there is a database.yml
   local database_locs="find ~/ -maxdepth 5 -path '*config/database.yml*' | sed 's/home//;s/vagrant//;s/\///;s/\///;s/\///'"
 
@@ -57,7 +68,7 @@ cpdb()
   elif [ $1 == '-r' ]; then
     cp ~/.database_configs/database_remote_office.yml ~/$dir/config/database.yml
     echo "now using your [remote office] database file in the [$dir] directory"
-    echo "you will need to run 'ssh db1.office.procore' to set this up"
+    echo "you will need to run 'ssh yourname@db1.office.procore' to set this up"
   else
     echo "specify [-l], [-r] or [-o], to change database file"
   fi
