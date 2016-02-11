@@ -29,7 +29,6 @@ motus
 babymate256
 
 ### Warm
-campfire
 obsidian
 apprentice
 
@@ -38,9 +37,7 @@ asu1dark
 mint
 luinnar
 zazen
-graywh
 thor
-kkruby
 elisex
 
 adaryn
@@ -49,15 +46,13 @@ symfony
 elisex
 vj
 twitchy
-skittles_dark
 gor
-jellyx
 peachpuff
 ir_black
-busybee
 
 flatlandia
 gotham256
 bubblegum
 ingretu
 bvemu
+busybee
