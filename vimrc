@@ -84,16 +84,6 @@ set wildmenu
 set splitbelow
 set splitright
 
-""ctags custom mappings
-"map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-"map <C-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
-
-" Start interactive EasyAlign in visual mode
-" vmap <Enter> <Plug>(EasyAlign)
-
-" " Start interactive EasyAlign with a Vim motion
-" nmap <Leader>a <Plug>(EasyAlign)
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CUSTOM AUTOCMDS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -144,14 +134,6 @@ colorscheme PaperColor
 " hi Todo cterm=bold
 " hi Todo ctermbg=none
 " hi Todo ctermfg=200
-
-" When you just need a nice color
-nmap <leader>1 :colorscheme flatlandia<cr>
-nmap <leader>2 :colorscheme busybee<cr>
-nmap <leader>3 :colorscheme bvemu<cr>
-nmap <leader>4 :colorscheme apprentice<cr>
-nmap <leader>5 :colorscheme gotham256<cr>
-nmap <leader>6 :colorscheme iceberg<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MISC KEY MAPS
