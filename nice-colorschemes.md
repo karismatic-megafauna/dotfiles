@@ -50,9 +50,3 @@ gor
 peachpuff
 ir_black
 
-flatlandia
-gotham256
-bubblegum
-ingretu
-bvemu
-busybee
