@@ -28,8 +28,11 @@ alias mkrc='mkrc -v'
 
 #############
 # functions #
+# TODO: move to own file and source it?
 #############
 
+# Copy Database
+# Useful for switching between different database.yml's
 cpdb()
 {
   # SETUP:
@@ -72,4 +75,22 @@ cpdb()
   else
     echo "specify [-l], [-r] or [-o], to change database file"
   fi
+}
+
+# Generates a Todo List with a date as the name
+# adds all args as a note
+note()
+{
+  # vars
+  local date_name="$(date '+%Y-%m-%d')"
+  local file_path="$HOME/notes/${date_name}.md"
+  local new_note="$*"
+
+  # if file exists, don't print title
+  if [ ! -f "$file_path" ]; then
+    echo "# Todo List" >> "$file_path"
+  fi
+
+  # add args as notes
+  echo "-[ ] $new_note" >> "$file_path"
 }
