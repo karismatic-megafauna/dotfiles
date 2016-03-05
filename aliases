@@ -92,5 +92,5 @@ note()
   fi
 
   # add args as notes
-  echo "-[ ] $new_note" >> "$file_path"
+  echo "- [ ] $new_note" >> "$file_path"
 }
