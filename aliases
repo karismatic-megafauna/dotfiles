@@ -17,6 +17,7 @@ alias v="$VISUAL"
 alias sz="source ~/.zshrc"
 alias tree="tree -CI node_modules"
 alias t="tree -CI node_modules"
+alias sp="spotify"
 
 # Tmux
 alias tmux="tmux -2"
