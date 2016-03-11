@@ -222,6 +222,7 @@ let g:jsx_ext_required = 0
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Add control slash and command slash (like atom) to collapse and expand
 map <C-o> :NERDTreeToggle<CR>
+map <C-f> :NERDTreeFind<CR>
 
 " change default arrows
 let g:NERDTreeDirArrowExpandable = '▸'
