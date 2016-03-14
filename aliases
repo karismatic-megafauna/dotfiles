@@ -89,7 +89,16 @@ note()
 
   # if file exists, don't print title
   if [ ! -f "$file_path" ]; then
-    echo "# Todo List" >> "$file_path"
+    echo "# Daily Objectives" >> "$file_path"
+    echo "- [ ] shoot a bow" >> "$file_path"
+    echo "- [ ] exercise" >> "$file_path"
+    echo "- [ ] code a thing" >> "$file_path"
+    echo "- [ ] write a story" >> "$file_path"
+    echo "- [ ] read a book" >> "$file_path"
+    echo "# Personal Notes" >> "$file_path"
+    echo "- [ ] get home before 6" >> "$file_path"
+    echo "# Work Notes" >> "$file_path"
+    echo "- [ ] get in before 8" >> "$file_path"
   fi
 
   # add args as notes
