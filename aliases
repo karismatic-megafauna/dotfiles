@@ -95,8 +95,11 @@ note()
     echo "- [ ] code a thing" >> "$file_path"
     echo "- [ ] write a story" >> "$file_path"
     echo "- [ ] read a book" >> "$file_path"
+    echo "- [ ] speak a foreign language" >> "$file_path"
+    echo " " >> "$file_path"
     echo "# Personal Notes" >> "$file_path"
     echo "- [ ] get home before 6" >> "$file_path"
+    echo " " >> "$file_path"
     echo "# Work Notes" >> "$file_path"
     echo "- [ ] get in before 8" >> "$file_path"
   fi
