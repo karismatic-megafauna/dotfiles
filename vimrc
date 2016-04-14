@@ -18,6 +18,11 @@ let g:omni_sql_no_default_maps = 1
 " allow unsaved background buffers and remember marks/undo for them
 set hidden
 
+" Visual scrollbar
+set statusline=%f%m%r%h%w\ 
+set statusline+=%{fugitive#statusline()}\ %= 
+set statusline+=%{VisualPercent()}
+
 " remember more commands and search history
 set history=10000
 set expandtab
@@ -83,6 +88,7 @@ set wildmenu
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
 set splitright
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CUSTOM AUTOCMDS

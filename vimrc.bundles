@@ -26,6 +26,7 @@ Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'terryma/vim-multiple-cursors'
 Plug 'elzr/vim-json'
+Plug 'naddeoa/vim-visual-page-percent'
 
 " Misc
 Plug 'scrooloose/syntastic'
