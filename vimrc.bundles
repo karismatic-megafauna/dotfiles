@@ -7,6 +7,7 @@ call plug#begin()
 Plug 'mxw/vim-jsx'
 Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
+Plug 'elixir-lang/vim-elixir'
 
 " Shell Util
 Plug 'edkolev/tmuxline.vim'
