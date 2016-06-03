@@ -18,11 +18,6 @@ let g:omni_sql_no_default_maps = 1
 " allow unsaved background buffers and remember marks/undo for them
 set hidden
 
-" Visual scrollbar
-set statusline=%f%m%r%h%w\ 
-set statusline+=%{fugitive#statusline()}\ %= 
-set statusline+=%{VisualPercent()}
-
 " remember more commands and search history
 set history=10000
 set expandtab
@@ -256,3 +251,13 @@ autocmd InsertLeave,WinLeave * if exists('w:last_fdm') | let &l:foldmethod=w:las
 set mouse=a
 " autocmd FileType gitcommit call setpos('.', [0, 1, 1, 0])
 " map <leader>t :!npm t<cr>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Statusline -- to use :hi, you must define below any :colorscheme
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+hi xBoom ctermfg=15 ctermbg=9 guifg=#d75f87 "rgb=215,95,135
+set statusline=%f%r%h%w\ 
+set statusline+=%{fugitive#statusline()}\ %= 
+set statusline+=%#xBoom#%m%*
+set statusline+=%{VisualPercent()}
+
