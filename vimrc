@@ -255,9 +255,10 @@ set mouse=a
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Statusline -- to use :hi, you must define below any :colorscheme
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-hi xBoom ctermfg=15 ctermbg=9 guifg=#d75f87 "rgb=215,95,135
-set statusline=%f%r%h%w\ 
-set statusline+=%{fugitive#statusline()}\ %= 
-set statusline+=%#xBoom#%m%*
-set statusline+=%{VisualPercent()}
+hi xBoom ctermfg=15 ctermbg=9
+set statusline=%f%r%h%w\                    "flags
+set statusline+=%{fugitive#statusline()}\   "what branch you are on
+set statusline+=\ %#xBoom#%m%*              "in yo face modified file
+set statusline+=%=                          "align right
+set statusline+=%{VisualPercent()}          "scrollbar
 
