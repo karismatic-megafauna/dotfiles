@@ -28,6 +28,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'terryma/vim-multiple-cursors'
 Plug 'elzr/vim-json'
 Plug 'naddeoa/vim-visual-page-percent'
+Plug 'junegunn/vim-peekaboo'
 
 " Misc
 Plug 'scrooloose/syntastic'
