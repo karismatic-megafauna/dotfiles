@@ -8,6 +8,7 @@ Plug 'mxw/vim-jsx'
 Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'elixir-lang/vim-elixir'
+Plug 'ElmCast/elm-vim'
 
 " Shell Util
 Plug 'edkolev/tmuxline.vim'
