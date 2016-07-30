@@ -30,5 +30,3 @@
 [branch "master"]
   remote = origin
   merge = refs/heads/master
-[commit]
-  template = ~/.circle-skip

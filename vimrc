@@ -50,7 +50,7 @@ set tags=tags;/
 set t_ti= t_te=
 
 " keep more context when scrolling off the end of a buffer
-set scrolloff=999
+set scrolloff=10
 
 " Store temporary files in a central spot
 set backup
