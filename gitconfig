@@ -6,7 +6,7 @@
   fom = fetch origin master
 	com = checkout master
 	co = checkout
-  ci = commit
+  ci = commit -v
   st = status
   br = branch
   df = diff
@@ -21,6 +21,7 @@
   lg = log --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	tree = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   suir = submodule update --init --recursive
+	pristine = !git reset --hard && git clean -df
 [push]
 	default = current
 [core]
