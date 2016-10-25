@@ -30,6 +30,12 @@ Plug 'elzr/vim-json'
 Plug 'naddeoa/vim-visual-page-percent'
 Plug 'mtscout6/syntastic-local-eslint.vim'
 
+" Snipmate & Dependencies
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+Plug 'michaelghinrichs/vim-redux-modules-snippets'
+
 " Misc
 Plug 'scrooloose/syntastic'
 Plug 'xolox/vim-misc'
