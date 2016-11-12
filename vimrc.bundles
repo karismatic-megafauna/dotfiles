@@ -35,10 +35,12 @@ Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
 Plug 'michaelghinrichs/vim-redux-modules-snippets'
+Plug 'michaelghinrichs/vim-mocha-chai-snippets'
 
 " Misc
 Plug 'scrooloose/syntastic'
 Plug 'xolox/vim-misc'
+Plug 'JamshedVesuna/vim-markdown-preview'
 
 " Colors
 " Plug 'flazz/vim-colorschemes'
