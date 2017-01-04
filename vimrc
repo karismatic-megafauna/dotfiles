@@ -72,7 +72,7 @@ filetype plugin on
 filetype plugin indent on
 
 " set .md as markdown files for syntax highlighting
-au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+au BufNewFile,BufFilePre,BufRead *.md setlocal filetype=markdown textwidth=80
 let vim_markdown_preview_github=1
 
 " use emacs-style tab completion when selecting files, etc
