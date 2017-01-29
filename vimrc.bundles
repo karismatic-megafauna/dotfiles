@@ -6,9 +6,11 @@ call plug#begin()
 " Syntax Highlighting
 Plug 'mxw/vim-jsx'
 Plug 'othree/html5.vim'
+Plug 'elzr/vim-json'
 Plug 'pangloss/vim-javascript'
 Plug 'elixir-lang/vim-elixir'
 Plug 'ElmCast/elm-vim'
+Plug 'moll/vim-node'
 
 " Shell Util
 Plug 'edkolev/tmuxline.vim'
@@ -21,12 +23,10 @@ Plug 'bronson/vim-trailing-whitespace'
 Plug 'junegunn/vim-easy-align'
 Plug 'ervandew/supertab'
 Plug 'mcasper/vim-infer-debugger'
-Plug 'moll/vim-node'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'elzr/vim-json'
 Plug 'naddeoa/vim-visual-page-percent'
 Plug 'mtscout6/syntastic-local-eslint.vim'
 
@@ -43,9 +43,9 @@ Plug 'xolox/vim-misc'
 Plug 'JamshedVesuna/vim-markdown-preview'
 
 " Colors
-" Plug 'flazz/vim-colorschemes'
 Plug 'xolox/vim-colorscheme-switcher'
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 filetype plugin indent on
