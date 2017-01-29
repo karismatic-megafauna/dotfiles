@@ -11,6 +11,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'elixir-lang/vim-elixir'
 Plug 'ElmCast/elm-vim'
 Plug 'moll/vim-node'
+Plug 'othree/yajs.vim'
 
 " Shell Util
 Plug 'edkolev/tmuxline.vim'
