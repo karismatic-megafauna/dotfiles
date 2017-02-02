@@ -285,3 +285,5 @@ let g:javascript_conceal_arrow_function       = "⇒"
 
 " Add keybinding for concealing
 map <leader>c :exec &conceallevel ? "set conceallevel=0" : "set conceallevel=1"<CR>
+
+let g:SuperTabDefaultCompletionType = "<c-n>"
