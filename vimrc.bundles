@@ -12,11 +12,13 @@ Plug 'elixir-lang/vim-elixir'
 Plug 'ElmCast/elm-vim'
 Plug 'moll/vim-node'
 Plug 'othree/yajs.vim'
+Plug 'avh4/elm-format'
 
 " Shell Util
 Plug 'edkolev/tmuxline.vim'
 Plug 'rking/ag.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'bling/vim-bufferline'
 
 " Editor Util
 Plug 'scrooloose/nerdtree'
