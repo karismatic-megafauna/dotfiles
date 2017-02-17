@@ -287,3 +287,5 @@ let g:javascript_conceal_arrow_function       = "⇒"
 map <leader>c :exec &conceallevel ? "set conceallevel=0" : "set conceallevel=1"<CR>
 
 let g:SuperTabDefaultCompletionType = "<c-n>"
+
+let g:elm_format_autosave = 1
