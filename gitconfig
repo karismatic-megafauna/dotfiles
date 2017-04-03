@@ -25,7 +25,7 @@
 [push]
 	default = current
 [core]
-	editor = vim
+	editor = nvim
 [color]
   ui = auto
 [branch "master"]

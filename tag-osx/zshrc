@@ -23,7 +23,7 @@ if [ -f /etc/profile ]; then
 fi
 
 # use vim as visual editor
-export VISUAL=vim
+export VISUAL=nvim
 export EDITOR=$VISUAL
 
 # aliases

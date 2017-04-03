@@ -22,6 +22,10 @@ alias sp="spotify"
 # Tmux
 alias tmux="tmux -2"
 
+# Neo Vim
+alias vim ="nvim"
+alias vi ="nvim"
+
 # rcm
 alias rcup='rcup -v'
 alias rcdn='rcdn -v'
@@ -77,33 +81,3 @@ cpdb()
     echo "specify [-l], [-r] or [-o], to change database file"
   fi
 }
-
-# Generates a Todo List with a date as the name
-# adds all args as a note
-# note()
-# {
-#   # vars
-#   local date_name="$(date '+%Y-%m-%d')"
-#   local file_path="$HOME/notes/${date_name}.md"
-#   local new_note="$*"
-
-#   # if file exists, don't print title
-#   if [ ! -f "$file_path" ]; then
-#     echo "# Daily Objectives" >> "$file_path"
-#     echo "- [ ] shoot a bow" >> "$file_path"
-#     echo "- [ ] exercise" >> "$file_path"
-#     echo "- [ ] code a thing" >> "$file_path"
-#     echo "- [ ] write a story" >> "$file_path"
-#     echo "- [ ] read a book" >> "$file_path"
-#     echo "- [ ] speak a foreign language" >> "$file_path"
-#     echo " " >> "$file_path"
-#     echo "# Personal Notes" >> "$file_path"
-#     echo "- [ ] get home before 6" >> "$file_path"
-#     echo " " >> "$file_path"
-#     echo "# Work Notes" >> "$file_path"
-#     echo "- [ ] get in before 8" >> "$file_path"
-#   fi
-
-#   # add args as notes
-#   echo "- [ ] $new_note" >> "$file_path"
-# }
