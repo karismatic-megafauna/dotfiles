@@ -34,6 +34,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'naddeoa/vim-visual-page-percent'
 Plug 'mtscout6/syntastic-local-eslint.vim'
 Plug 'mhinz/vim-startify'
+Plug 'benmills/vimux'
 
 " Snipmate & Dependencies
 Plug 'MarcWeber/vim-addon-mw-utils'
