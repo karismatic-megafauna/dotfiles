@@ -19,6 +19,7 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'rking/ag.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'bling/vim-bufferline'
+Plug 'christoomey/vim-tmux-navigator'
 
 " Editor Util
 Plug 'scrooloose/nerdtree'
