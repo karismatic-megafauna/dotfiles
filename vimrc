@@ -167,6 +167,12 @@ nnoremap <leader><leader> <c-^>
 " use K to do the opposite of J
 nnoremap K i<CR><Esc>
 
+" TEMP: disable default vim window movement
+noremap <C-w>h <Nop>
+noremap <C-w>j <Nop>
+noremap <C-w>k <Nop>
+noremap <C-w>l <Nop>
+
 " EXPERIMENTAL move through buffers from home
 map <leader>l :bn<CR>
 map <leader>h :bp<CR>
