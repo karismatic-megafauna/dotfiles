@@ -14,8 +14,6 @@
   plm = pull origin master
   ph = push origin HEAD
   ad = add -p
-  s = stash
-  sp = stash pop
   rb = rebase origin/master
   hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
   lg = log --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
