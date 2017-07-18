@@ -43,42 +43,6 @@ autocmd BufNewFile,BufRead *.json set ft=javascript
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:VimuxOrientation = "h"
 
-" Prompt for a command to run
-map <Leader>vp :VimuxPromptCommand<CR>
-
-" Run last command executed by VimuxRunCommand
-map <Leader>vl :VimuxRunLastCommand<CR>
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" MISC KEY MAPS
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Fast saving
-nmap <leader>w :wall!<cr>
-
-" Fast buffer closing
-nmap <leader>q :bd<cr>
-
-" Fast vim closing
-nnoremap <leader>qq :q<cr>
-
-" Switch back to previous file
-nnoremap <leader><leader> <c-^>
-
-" use K to do the opposite of J
-nnoremap K i<CR><Esc>
-
-" move through buffers from home
-map <leader>l :bn<CR>
-map <leader>h :bp<CR>
-
-" Leader r to toggle the line number counting method
-nnoremap <silent><leader>r :call NumberToggle()<cr>
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" FZF
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <Leader>f :FZF<CR>
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Easy Align
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -106,10 +70,6 @@ let g:jsx_ext_required = 0
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Nerd Tree
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Add control slash and command slash (like atom) to collapse and expand
-map <C-o> :NERDTreeToggle<CR>
-map <C-f> :NERDTreeFind<CR>
-
 " change default arrows
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
@@ -128,10 +88,6 @@ autocmd BufWinEnter * silent! :%foldopen!
 "experimental
 autocmd InsertEnter * if !exists('w:last_fdm') | let w:last_fdm=&foldmethod | setlocal foldmethod=manual | endif
 autocmd InsertLeave,WinLeave * if exists('w:last_fdm') | let &l:foldmethod=w:last_fdm | unlet w:last_fdm | endif
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Toggles
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Statusline -- to use :hi, you must define below any :colorscheme

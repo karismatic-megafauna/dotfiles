@@ -1,0 +1,45 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Vimux
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Prompt for a command to run
+map <Leader>vp :VimuxPromptCommand<CR>
+
+" Run last command executed by VimuxRunCommand
+map <Leader>vl :VimuxRunLastCommand<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" FZF
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <Leader>f :FZF<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Nerd Tree
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Add control slash and command slash (like atom) to collapse and expand
+map <C-o> :NERDTreeToggle<CR>
+map <C-f> :NERDTreeFind<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Custom
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Fast saving
+nmap <leader>w :wall!<cr>
+
+" Fast buffer closing
+nmap <leader>q :bd<cr>
+
+" Fast vim closing
+nnoremap <leader>qq :q<cr>
+
+" Switch back to previous file
+nnoremap <leader><leader> <c-^>
+
+" use K to do the opposite of J
+nnoremap K i<CR><Esc>
+
+" move through buffers from home
+map <leader>l :bn<CR>
+map <leader>h :bp<CR>
+
+" Leader r to toggle the line number counting method
+nnoremap <silent><leader>r :call NumberToggle()<cr>
