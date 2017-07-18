@@ -10,7 +10,6 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BASIC EDITING CONFIGURATION
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set encoding=utf-8
 let mapleader = " "
 " No sql shit
 let g:omni_sql_no_default_maps = 1
@@ -19,15 +18,12 @@ let g:omni_sql_no_default_maps = 1
 set hidden
 
 " remember more commands and search history
-set history=10000
 set expandtab
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
-set autoindent
 set laststatus=2
 set showmatch
-set incsearch
 set hlsearch
 
 " make searches case-sensitive only if they contain upper-case characters
@@ -37,7 +33,6 @@ set ignorecase smartcase
 set nocursorline
 
 " Always show current position
-set ruler
 set relativenumber
 set number
 set switchbuf=useopen
@@ -50,15 +45,12 @@ set tags=tags;/
 set t_ti= t_te=
 
 " keep more context when scrolling off the end of a buffer
-set scrolloff=10
+" set scrolloff=10
 
 " Store temporary files in a central spot
 set backup
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
-
-" allow backspacing over everything in insert mode
-set backspace=indent,eol,start
 
 " display incomplete commands
 set showcmd
@@ -78,13 +70,9 @@ let vim_markdown_preview_github=1
 " use emacs-style tab completion when selecting files, etc
 set wildmode=longest,list
 
-" make tab completion for files/buffers act like bash
-set wildmenu
-
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
 set splitright
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CUSTOM AUTOCMDS
@@ -115,7 +103,7 @@ command! SaveCurrentColor execute ":redir >> ~/.dotfiles/nice-colorschemes.md | 
 " COLOR
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "set guioptions-=T
-set t_Co=256 " 256 colors
+" set t_Co=256 " 256 colors
 set colorcolumn=80
 set background=dark
 let g:gruvbox_contrast_dark='medium'
@@ -167,12 +155,6 @@ nnoremap <leader><leader> <c-^>
 " use K to do the opposite of J
 nnoremap K i<CR><Esc>
 
-" TEMP: disable default vim window movement
-noremap <C-w>h <Nop>
-noremap <C-w>j <Nop>
-noremap <C-w>k <Nop>
-noremap <C-w>l <Nop>
-
 " EXPERIMENTAL move through buffers from home
 map <leader>l :bn<CR>
 map <leader>h :bp<CR>
@@ -182,21 +164,46 @@ imap <c-c> <esc>
 
 " Clear the search buffer when hitting return
 function! MapCR()
-    nnoremap <cr> :nohlsearch<cr><cr>
+  nnoremap <cr> :nohlsearch<cr><cr>
 endfunction
 call MapCR()
+
+" Enables relative numbers.
+function! EnableRelativeNumbers()
+  set number
+  set relativenumber
+endfunc
+
+" Disables relative numbers.
+function! DisableRelativeNumbers()
+  set number
+  set norelativenumber
+endfunc
+
+function! NumberToggle()
+  if(&relativenumber == 1)
+    call DisableRelativeNumbers()
+    let g:relativemode = 0
+  else
+    call EnableRelativeNumbers()
+    let g:relativemode = 1
+  endif
+endfunc
+
+" Leader r to toggle the line number counting method
+nnoremap <silent><leader>r :call NumberToggle()<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MULTIPURPOSE TAB KEY
 " " Indent if we're at the beginning of a line. Else, do completion.
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
- function! InsertTabWrapper()
-    let col = col('.') - 1
-    if !col || getline('.')[col - 1] !~ '\k'
-       return "\<tab>"
-    else
-       return "\<c-p>"
-    endif
+function! InsertTabWrapper()
+  let col = col('.') - 1
+  if !col || getline('.')[col - 1] !~ '\k'
+    return "\<tab>"
+  else
+    return "\<c-p>"
+  endif
 endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
@@ -303,6 +310,7 @@ let g:javascript_conceal_arrow_function       = "⇒"
 " Add keybinding for concealing
 map <leader>c :exec &conceallevel ? "set conceallevel=0" : "set conceallevel=1"<CR>
 
+" Flip order of tab completion
 let g:SuperTabDefaultCompletionType = "<c-n>"
 
 let g:elm_format_autosave = 1
