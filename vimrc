@@ -8,11 +8,15 @@ if filereadable(expand("~/.vimrc.bundles"))
 endif
 
 if filereadable(expand("~/.vimrc.functions"))
-  source ~/.vimrc.key_maps
+  source ~/.vimrc.functions
 endif
 
 if filereadable(expand("~/.vimrc.basic_configs"))
   source ~/.vimrc.basic_configs
+endif
+
+if filereadable(expand("~/.vimrc.color"))
+  source ~/.vimrc.color
 endif
 
 if filereadable(expand("~/.vimrc.key_maps"))
@@ -33,33 +37,6 @@ set complete+=kspell
 
 " JSON formatting
 autocmd BufNewFile,BufRead *.json set ft=javascript
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" COLOR
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"set guioptions-=T
-" set t_Co=256 " 256 colors
-set colorcolumn=80
-set background=dark
-let g:gruvbox_contrast_dark='medium'
-colorscheme gruvbox
-
-" " Fix Transparency
-" hi Normal ctermbg=none
-" hi NonText ctermbg=none
-
-" " Line numbers
-" hi LineNr ctermbg=none
-" hi LineNr ctermfg=248
-
-" " ColorColumn (80)
-" hi ColorColumn ctermbg=234
-" hi ColorColumn ctermfg=161
-
-" " Colors for TODO/FIXME
-" hi Todo cterm=bold
-" hi Todo ctermbg=none
-" hi Todo ctermfg=200
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vimux Configs

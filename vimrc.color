@@ -1,0 +1,9 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" COLOR
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"set guioptions-=T
+" set t_Co=256 " 256 colors
+set colorcolumn=80
+set background=dark
+let g:gruvbox_contrast_dark='medium'
+colorscheme gruvbox
