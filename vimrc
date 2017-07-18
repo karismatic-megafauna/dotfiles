@@ -58,15 +58,6 @@ set showcmd
 " Enable highlighting for syntax
 syntax on
 
-" 'cindent' is on in C files, etc.
-" load indent files, to automatically do language-dependent indenting.
-filetype plugin on
-filetype plugin indent on
-
-" set .md as markdown files for syntax highlighting
-au BufNewFile,BufFilePre,BufRead *.md setlocal filetype=markdown textwidth=80
-let vim_markdown_preview_github=1
-
 " use emacs-style tab completion when selecting files, etc
 set wildmode=longest,list
 
@@ -75,29 +66,19 @@ set splitbelow
 set splitright
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" CUSTOM AUTOCMDS
+" File Specific Configurations
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-augroup vimrcEx
-" Jump to last cursor position unless it's invalid or in an event handler
-  autocmd!
-  autocmd BufReadPost *
-    \ if line("'\"") > 0 && line("'\"") <= line("$") |
-    \ exe "normal g`\"" |
-    \ endif
-
-    "for ruby, autoindent with two spaces, always expand tabs
-    autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,cucumber set ai sw=2 sts=2 et
-
-    autocmd BufRead, BufNewFile *.sass setfiletype sass
-augroup END
+" set .md as markdown files for syntax highlighting
+au BufNewFile,BufFilePre,BufRead *.md setlocal filetype=markdown textwidth=80
+let vim_markdown_preview_github=1
 
 " Spell checking and AutoCompleting
 autocmd FileType gitcommit setlocal spell textwidth=72
 autocmd BufRead,BufNewFile *.md setlocal spell
 set complete+=kspell
 
-" Save current color to file
-command! SaveCurrentColor execute ":redir >> ~/.dotfiles/nice-colorschemes.md | echo g:colors_name | redir END"
+" JSON formatting
+autocmd BufNewFile,BufRead *.json set ft=javascript
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COLOR
@@ -159,9 +140,6 @@ nnoremap K i<CR><Esc>
 map <leader>l :bn<CR>
 map <leader>h :bp<CR>
 
-" Control-C to return to Command Mode
-imap <c-c> <esc>
-
 " Clear the search buffer when hitting return
 function! MapCR()
   nnoremap <cr> :nohlsearch<cr><cr>
@@ -194,32 +172,9 @@ endfunc
 nnoremap <silent><leader>r :call NumberToggle()<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" MULTIPURPOSE TAB KEY
-" " Indent if we're at the beginning of a line. Else, do completion.
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-function! InsertTabWrapper()
-  let col = col('.') - 1
-  if !col || getline('.')[col - 1] !~ '\k'
-    return "\<tab>"
-  else
-    return "\<c-p>"
-  endif
-endfunction
-inoremap <tab> <c-r>=InsertTabWrapper()<cr>
-inoremap <s-tab> <c-n>
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FZF
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <Leader>f :FZF<CR>
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Vim Multiple Cursors
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:multi_cursor_next_key = '<C-n>'
-let g:multi_cursor_prev_key = '<C-p>'
-let g:multi_cursor_skip_key = '<C-x>'
-let g:multi_cursor_quit_key = '<C-c>'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Easy Align
@@ -296,19 +251,6 @@ set statusline+=%{fugitive#statusline()}\   "what branch you are on
 set statusline+=\ %#xBoom#%m%*              "in yo face modified file
 set statusline+=%=                          "align right
 set statusline+=%{VisualPercent()}          "scrollbar
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Concealing in Javascript
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set conceallevel=0
-let g:javascript_conceal_function             = "ƒ"
-let g:javascript_conceal_null                 = "ø"
-let g:javascript_conceal_undefined            = "¿"
-let g:javascript_conceal_NaN                  = "ℕ"
-let g:javascript_conceal_arrow_function       = "⇒"
-
-" Add keybinding for concealing
-map <leader>c :exec &conceallevel ? "set conceallevel=0" : "set conceallevel=1"<CR>
 
 " Flip order of tab completion
 let g:SuperTabDefaultCompletionType = "<c-n>"
