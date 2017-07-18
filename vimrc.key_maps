@@ -52,3 +52,7 @@ map <leader>h :bp<CR>
 
 " Leader r to toggle the line number counting method
 nnoremap <silent><leader>r :call NumberToggle()<cr>
+
+" paste toggle
+set pastetoggle=<leader>p
+

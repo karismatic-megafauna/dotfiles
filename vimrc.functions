@@ -7,13 +7,12 @@ function! MapCR()
 endfunction
 call MapCR()
 
-" Enables relative numbers.
+" Toggle relative line number
 function! EnableRelativeNumbers()
   set number
   set relativenumber
 endfunc
 
-" Disables relative numbers.
 function! DisableRelativeNumbers()
   set number
   set norelativenumber
