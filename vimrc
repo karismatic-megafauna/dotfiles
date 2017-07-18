@@ -23,8 +23,12 @@ if filereadable(expand("~/.vimrc.key_maps"))
   source ~/.vimrc.key_maps
 endif
 
+if filereadable(expand("~/.vimrc.statusline"))
+  source ~/.vimrc.statusline
+endif
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" File Specific Configurations
+" Misc Configurations
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " set .md as markdown files for syntax highlighting
 au BufNewFile,BufFilePre,BufRead *.md setlocal filetype=markdown textwidth=80
@@ -39,18 +43,9 @@ set complete+=kspell
 autocmd BufNewFile,BufRead *.json set ft=javascript
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Vimux Configs
+" Vimux
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:VimuxOrientation = "h"
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Easy Align
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" start interactive EasyAlign in visual mode (e.g. vipga)
-xmap ga <Plug>(EasyAlign)
-
-" Start interactive EasyAlign for a motion/text object (e.g. gaip)
-nmap ga <Plug>(EasyAlign)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Linters / Syntastic
@@ -90,16 +85,7 @@ autocmd InsertEnter * if !exists('w:last_fdm') | let w:last_fdm=&foldmethod | se
 autocmd InsertLeave,WinLeave * if exists('w:last_fdm') | let &l:foldmethod=w:last_fdm | unlet w:last_fdm | endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Statusline -- to use :hi, you must define below any :colorscheme
+" SuperTab - Flip order of tab completion
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-hi xBoom ctermfg=15 ctermbg=9
-set statusline=%f%r%h%w\                    "flags
-set statusline+=%{fugitive#statusline()}\   "what branch you are on
-set statusline+=\ %#xBoom#%m%*              "in yo face modified file
-set statusline+=%=                          "align right
-set statusline+=%{VisualPercent()}          "scrollbar
-
-" Flip order of tab completion
 let g:SuperTabDefaultCompletionType = "<c-n>"
 
-let g:elm_format_autosave = 1

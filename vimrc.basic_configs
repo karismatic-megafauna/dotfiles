@@ -2,8 +2,6 @@
 " BASIC EDITING CONFIGURATION
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader = " "
-" No sql shit
-let g:omni_sql_no_default_maps = 1
 
 " allow unsaved background buffers and remember marks/undo for them
 set hidden
@@ -63,3 +61,8 @@ set noswapfile
 
 " enable mouse usage
 set mouse=a
+
+" Get sql to work
+let g:omni_sql_no_default_maps = 1
+" elm formatting
+let g:elm_format_autosave = 1
