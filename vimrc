@@ -7,8 +7,16 @@ if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
 
+if filereadable(expand("~/.vimrc.functions"))
+  source ~/.vimrc.key_maps
+endif
+
 if filereadable(expand("~/.vimrc.basic_configs"))
   source ~/.vimrc.basic_configs
+endif
+
+if filereadable(expand("~/.vimrc.key_maps"))
+  source ~/.vimrc.key_maps
 endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -82,37 +90,9 @@ nnoremap <leader><leader> <c-^>
 " use K to do the opposite of J
 nnoremap K i<CR><Esc>
 
-" EXPERIMENTAL move through buffers from home
+" move through buffers from home
 map <leader>l :bn<CR>
 map <leader>h :bp<CR>
-
-" Clear the search buffer when hitting return
-function! MapCR()
-  nnoremap <cr> :nohlsearch<cr><cr>
-endfunction
-call MapCR()
-
-" Enables relative numbers.
-function! EnableRelativeNumbers()
-  set number
-  set relativenumber
-endfunc
-
-" Disables relative numbers.
-function! DisableRelativeNumbers()
-  set number
-  set norelativenumber
-endfunc
-
-function! NumberToggle()
-  if(&relativenumber == 1)
-    call DisableRelativeNumbers()
-    let g:relativemode = 0
-  else
-    call EnableRelativeNumbers()
-    let g:relativemode = 1
-  endif
-endfunc
 
 " Leader r to toggle the line number counting method
 nnoremap <silent><leader>r :call NumberToggle()<cr>
@@ -130,14 +110,6 @@ xmap ga <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Files and backups
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Turn backup off, since most stuff is in SVN
-set nobackup
-set nowb
-set noswapfile
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Linters / Syntastic
@@ -183,10 +155,6 @@ autocmd InsertLeave,WinLeave * if exists('w:last_fdm') | let &l:foldmethod=w:las
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Toggles
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" enable mouse usage
-set mouse=a
-" autocmd FileType gitcommit call setpos('.', [0, 1, 1, 0])
-" map <leader>t :!npm t<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Statusline -- to use :hi, you must define below any :colorscheme

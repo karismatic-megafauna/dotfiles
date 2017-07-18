@@ -1,0 +1,30 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" FUNCTIONS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Clear the search buffer when hitting return
+function! MapCR()
+  nnoremap <cr> :nohlsearch<cr><cr>
+endfunction
+call MapCR()
+
+" Enables relative numbers.
+function! EnableRelativeNumbers()
+  set number
+  set relativenumber
+endfunc
+
+" Disables relative numbers.
+function! DisableRelativeNumbers()
+  set number
+  set norelativenumber
+endfunc
+
+function! NumberToggle()
+  if(&relativenumber == 1)
+    call DisableRelativeNumbers()
+    let g:relativemode = 0
+  else
+    call EnableRelativeNumbers()
+    let g:relativemode = 1
+  endif
+endfunc

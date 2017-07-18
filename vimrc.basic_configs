@@ -36,7 +36,7 @@ set tags=tags;/
 set t_ti= t_te=
 
 " keep more context when scrolling off the end of a buffer
-" set scrolloff=10
+set scrolloff=10
 
 " Store temporary files in a central spot
 set backup
@@ -55,3 +55,11 @@ set wildmode=longest,list
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
 set splitright
+
+" Turn backup off, since most stuff is in SVN
+set nobackup
+set nowb
+set noswapfile
+
+" enable mouse usage
+set mouse=a
