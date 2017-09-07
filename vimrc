@@ -57,6 +57,20 @@ endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
 
+augroup vimrcEx
+	" Jump to last cursorosition unless it's invalid or in an event handler
+	autocmd!
+	autocmd BufReadPost *
+				\ if line("'\"") > 0 && line("'\"") <= line("$") |
+				\ exe "normal g`\"" |
+				\ endif
+
+	"for ruby, autoindent with two spaces, always expand tabs
+	autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,cucumber set ai sw=2 sts=2 et
+
+	autocmd BufRead, BufNewFile *.sass setfiletype sass
+augroup END
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vimux
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

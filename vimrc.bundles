@@ -10,7 +10,6 @@ Plug 'pangloss/vim-javascript'
 Plug 'elixir-lang/vim-elixir'
 Plug 'ElmCast/elm-vim'
 Plug 'moll/vim-node'
-Plug 'othree/yajs.vim'
 Plug 'avh4/elm-format'
 
 " Shell Util
