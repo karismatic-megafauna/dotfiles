@@ -17,67 +17,11 @@ alias v="$VISUAL"
 alias sz="source ~/.zshrc"
 alias tree="tree -CI node_modules"
 alias t="tree -CI node_modules"
-alias sp="spotify"
 
 # Tmux
 alias tmux="tmux -2"
-
-# Neo Vim
-alias vim ="nvim"
-alias vi ="nvim"
 
 # rcm
 alias rcup='rcup -v'
 alias rcdn='rcdn -v'
 alias mkrc='mkrc -v'
-
-#############
-# functions #
-# TODO: move to own file and source it?
-#############
-
-# Copy Database
-# Useful for switching between different database.yml's
-cpdb()
-{
-  # SETUP:
-  # `mkdir ~/.database_configs`
-  # `touch database_local.yml database_office.yml database_remote_office.yml`
-  # each of these should have to correct configs
-  #
-  # USAGE:
-  # on your virtual machine do this:
-  # cpdb -l for you own local setup
-  # cpdb -r for remote office (then ssh in)
-  # cpdb -o for the office db while in the office
-  #
-  # Enjoy!
-  #find all places where there is a database.yml
-  local database_locs="find ~/ -maxdepth 5 -path '*config/database.yml*' | sed 's/home//;s/vagrant//;s/\///;s/\///;s/\///'"
-
-  #set second arg to procore if not defined
-  local dir=${2:-procore}
-
-  #check and see if directroy exists
-  if [ ! -d ~/$dir ]; then
-    echo "$dir does not exist, try one of these:"
-    echo "--------------------------------------"
-    eval $database_locs
-    return
-  fi
-
-  #check if database file exists and cp it
-  if [ $1 == '-l' ]; then
-    cp ~/.database_configs/database_local.yml ~/$dir/config/database.yml
-    echo "now using your [local] database file in the [$dir] directory"
-  elif [ $1 == '-o' ]; then
-    cp ~/.database_configs/database_office.yml ~/$dir/config/database.yml
-    echo "now using your [office] database file in the [$dir] directory"
-  elif [ $1 == '-r' ]; then
-    cp ~/.database_configs/database_remote_office.yml ~/$dir/config/database.yml
-    echo "now using your [remote office] database file in the [$dir] directory"
-    echo "you will need to run 'ssh yourname@db1.office.procore' to set this up"
-  else
-    echo "specify [-l], [-r] or [-o], to change database file"
-  fi
-}
