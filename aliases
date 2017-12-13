@@ -5,7 +5,7 @@
 # general
 alias cp='cp -iv'
 alias mkdir='mkdir -v'
-alias ls='ls -hFG'
+alias ls='ls -hFG --color=auto'
 alias mv='mv -iv'
 alias ln='ln -v'
 alias rm='rm -v'
