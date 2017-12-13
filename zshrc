@@ -4,7 +4,7 @@
 
 export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="smt"
+ZSH_THEME="flazz"
 DEFAULT_USER=$USER
 
 COMPLETION_WAITING_DOTS="true"
