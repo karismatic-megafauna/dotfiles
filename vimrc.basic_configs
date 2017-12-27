@@ -7,7 +7,9 @@ let mapleader = " "
 set hidden
 
 " remember more commands and search history
-set expandtab
+set noexpandtab
+set copyindent
+set preserveindent
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2

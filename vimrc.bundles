@@ -32,7 +32,6 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'naddeoa/vim-visual-page-percent'
-Plug 'mtscout6/syntastic-local-eslint.vim'
 Plug 'mhinz/vim-startify'
 Plug 'benmills/vimux'
 Plug 'janko-m/vim-test'
@@ -43,7 +42,7 @@ Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
 
 " Misc
-Plug 'scrooloose/syntastic'
+Plug 'w0rp/ale'
 Plug 'xolox/vim-misc'
 Plug 'JamshedVesuna/vim-markdown-preview'
 
