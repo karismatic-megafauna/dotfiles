@@ -61,11 +61,6 @@ let g:ale_linters = {
 			\'javascript': ['eslint'],
 			\}
 
-" let g:syntastic_scss_checkers = ['scss_lint']
-
-"eslint linter
-" let g:syntastic_javascript_checkers = ['eslint']
-
 "JSX syntax Highlighting everywhere
 let g:jsx_ext_required = 0
 
@@ -81,16 +76,12 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Folding
-" http://stackoverflow.com/questions/4789605/how-do-i-enable-automatic-folds-in-vim
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" set foldmethod=syntax
-" set foldlevelstart=1
-" let javaScript_fold=1
-" autocmd BufWinEnter * silent! :%foldopen!
-" "experimental
-" autocmd InsertEnter * if !exists('w:last_fdm') | let w:last_fdm=&foldmethod | setlocal foldmethod=manual | endif
-" autocmd InsertLeave,WinLeave * if exists('w:last_fdm') | let &l:foldmethod=w:last_fdm | unlet w:last_fdm | endif
+set foldmethod=syntax
 
+" Open folds on window open
+" https://stackoverflow.com/a/8316817
+autocmd BufWinEnter * silent! :%foldopen!
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Deoplete
