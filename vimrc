@@ -27,7 +27,7 @@ if filereadable(expand("~/.vimrc.statusline"))
   source ~/.vimrc.statusline
 endif
 
-if filereadable(expand("~/.vimrc.pacakge_configs"))
+if filereadable(expand("~/.vimrc.package_configs"))
   source ~/.vimrc.package_configs
 endif
 
