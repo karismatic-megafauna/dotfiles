@@ -5,10 +5,10 @@
 # general
 alias cp='cp -iv'
 alias mkdir='mkdir -v'
-alias ls='ls -hFG --color=auto'
+alias ls='ls -G'
 alias mv='mv -iv'
 alias ln='ln -v'
-alias rm='rm -v'
+alias rm='rm'
 alias p='ps -a'
 alias back='cd -'
 alias path='pretty_path'

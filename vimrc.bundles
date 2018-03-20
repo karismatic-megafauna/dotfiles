@@ -11,6 +11,7 @@ Plug 'elixir-lang/vim-elixir'
 Plug 'ElmCast/elm-vim'
 Plug 'moll/vim-node'
 Plug 'avh4/elm-format'
+Plug 'elzr/vim-json'
 
 " Shell Util
 Plug 'edkolev/tmuxline.vim'
@@ -34,11 +35,9 @@ endif
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'wellle/tmux-complete.vim'
 Plug 'wellle/targets.vim'
-Plug 'mcasper/vim-infer-debugger'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'naddeoa/vim-visual-page-percent'
 Plug 'mhinz/vim-startify'
 Plug 'benmills/vimux'
 Plug 'janko-m/vim-test'
@@ -49,8 +48,10 @@ Plug 'xolox/vim-misc'
 Plug 'JamshedVesuna/vim-markdown-preview'
 
 " Colors
-Plug 'NLKNguyen/papercolor-theme'
 Plug 'morhetz/gruvbox'
+" Plug 'fenetikm/falcon'
+" Plug 'NLKNguyen/papercolor-theme'
+" Plug 'mhartington/oceanic-next'
 
 call plug#end()
 filetype plugin indent on

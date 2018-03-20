@@ -6,5 +6,4 @@ set statusline=%f%r%h%w\                    "flags
 set statusline+=%{fugitive#statusline()}\   "what branch you are on
 set statusline+=\ %#xBoom#%m%*              "in yo face modified file
 set statusline+=%=                          "align right
-set statusline+=%{VisualPercent()}          "scrollbar
 

@@ -7,7 +7,7 @@ let mapleader = " "
 set hidden
 
 " remember more commands and search history
-set noexpandtab
+set expandtab
 set copyindent
 set preserveindent
 set tabstop=2
@@ -23,13 +23,16 @@ set ignorecase smartcase
 " highlight current line
 set nocursorline
 
-" Always show current position
+" " Always show current position
 set relativenumber
 set number
 set switchbuf=useopen
 set numberwidth=6
 set winwidth=90
-set tags=tags;/
+set re=1
+set ttyfast
+set lazyredraw
+" set tags=tags;/
 
 " Prevent Vim from clobbering the scrollback buffer. See
 " http://www.shallowsky.com/linux/noaltscreen.html
@@ -68,3 +71,6 @@ set mouse=a
 let g:omni_sql_no_default_maps = 1
 " elm formatting
 let g:elm_format_autosave = 1
+
+" Turn off parenthesis concealing in JSON
+g:vim_json_syntax_conceal = 0
