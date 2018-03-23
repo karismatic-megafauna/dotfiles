@@ -1,9 +1,8 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Statusline -- to use :hi, you must define below any :colorscheme
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 hi xBoom ctermfg=15 ctermbg=9
-set statusline=%f%r%h%w\                    "flags
-set statusline+=%{fugitive#statusline()}\   "what branch you are on
+set statusline+=%f
 set statusline+=\ %#xBoom#%m%*              "in yo face modified file
 set statusline+=%=                          "align right
-

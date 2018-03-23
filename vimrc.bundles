@@ -49,7 +49,7 @@ Plug 'JamshedVesuna/vim-markdown-preview'
 
 " Colors
 Plug 'morhetz/gruvbox'
-" Plug 'fenetikm/falcon'
+Plug 'fenetikm/falcon'
 " Plug 'NLKNguyen/papercolor-theme'
 " Plug 'mhartington/oceanic-next'
 
