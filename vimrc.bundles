@@ -32,6 +32,7 @@ else
 	Plug 'roxma/nvim-yarp'
 	Plug 'roxma/vim-hug-neovim-rpc'
 endif
+Plug 'ternjs/tern_for_vim', { 'do': 'cd ~/.vim/plugged/tern_for_vim && npm install tern' }
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'wellle/tmux-complete.vim'
 Plug 'wellle/targets.vim'
