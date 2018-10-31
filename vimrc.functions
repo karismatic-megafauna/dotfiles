@@ -12,8 +12,8 @@ endfunction
 call MapCR()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Disable Relative Number
-" " Indent if we're at the beginning of a line. Else, do completion.
+" Toggle Relative Number
+" " For when I am pairing with others who don't VIM :)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 function! EnableRelativeNumbers()
   set number
