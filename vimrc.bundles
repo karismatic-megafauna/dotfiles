@@ -22,6 +22,7 @@ Plug 'christoomey/vim-tmux-navigator'
 
 " Editor Util
 Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-abolish'
 Plug 'scrooloose/nerdtree'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'junegunn/vim-easy-align'
