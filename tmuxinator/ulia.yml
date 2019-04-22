@@ -26,12 +26,12 @@ windows:
       layout: tiled
       panes:
         - node:
-          - cd ~/Code/Procore/procore/hydra_clients/unified_line_item_adder_prototype && yarn start
+          - cd ~/Code/Procore/procore/hydra_clients/unified_line_item_adder && yarn start
         - rails:
-          - cd ~/Code/Procore/procore && DEV_MODE=unified_line_item_adder_prototype bundle exec rails s puma -p 3000
+          - cd ~/Code/Procore/procore && DEV_MODE=unified_line_item_adder bundle exec rails s puma -p 3000
         - git:
           - cd ~/Code/Procore/procore
         - ssh:
           - cd ~/Code/Procore/procore && ssh mhinrichs@db1.office.procore
-  - hydra_vim: cd ~/Code/Procore/procore/hydra_clients/unified_line_item_adder_prototype && vim
+  - hydra_vim: cd ~/Code/Procore/procore/hydra_clients/unified_line_item_adder && vim
   - rails_vim: cd ~/Code/Procore/procore && vim
