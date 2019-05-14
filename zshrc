@@ -9,10 +9,9 @@ DEFAULT_USER=$USER
 
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(git)
+plugins=(git zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 ###
 # custom configs
@@ -25,7 +24,7 @@ export EDITOR=$VISUAL
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 
-# NVM
+# # NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -33,8 +32,10 @@ export NVM_DIR="$HOME/.nvm"
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND='ag -g ""'
+# export FZF_DEFAULT_COMMAND='ag -g ""'
 # export FZF_DEFAULT_COMMAND='rg --files --hidden --smartcase --glob "!.git/*"'
+# set -gx FZF_DEFAULT_COMMAND  'rg --files --no-ignore-vcs --hidden'
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # Fix bracketed paste mode issue
@@ -42,10 +43,13 @@ if [[ $TERM = dumb ]]; then
   unset zle_bracketed_paste
 fi
 
-export PATH="/usr/local/rbenv/bin:$PATH"
-export PATH="$PATH/.rbenv/shims:$PATH"
+# PostgreSQL
+export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
 
-export RBENV_ROOT="/usr/local/rbenv"
+# export PATH="/usr/local/rbenv/bin:$PATH"
+# export PATH="$PATH/.rbenv/shims:$PATH"
+
+# export RBENV_ROOT="/usr/local/rbenv"
 eval "$(rbenv init - )"
 
 # Better history
@@ -57,3 +61,4 @@ eval "$(rbenv init - )"
 # bindkey "^K" up-line-or-beginning-search # Up
 # bindkey "^B" down-line-or-beginning-search # Down
 bindkey "^l" autosuggest-accept
+export HOMEBREW_GITHUB_API_TOKEN=526d8a095f268bc6556ff6896858f9b3a9d317e0

@@ -1,0 +1,9 @@
+--files
+--no-ignore-vcs
+
+# Search hidden files and directories
+--hidden
+
+# Don't search these
+--glob=!.git/*
+--glob=!node_modules/*

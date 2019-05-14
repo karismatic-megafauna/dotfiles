@@ -25,3 +25,6 @@ alias tmux="tmux -2"
 alias rcup='rcup -v'
 alias rcdn='rcdn -v'
 alias mkrc='mkrc -v'
+
+# vim
+alias vim=/usr/local/bin/vim

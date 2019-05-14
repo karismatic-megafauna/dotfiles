@@ -29,9 +29,9 @@ windows:
           - cd ~/Code/Procore/procore/hydra_clients/unified_line_item_adder && yarn start
         - rails:
           - cd ~/Code/Procore/procore && DEV_MODE=unified_line_item_adder bundle exec rails s puma -p 3000
-        - git:
-          - cd ~/Code/Procore/procore
+        - htop:
+          - cd ~/Code/Procore/procore && htop
         - ssh:
-          - cd ~/Code/Procore/procore && ssh mhinrichs@db1.office.procore
+          - cd ~/Code/Procore/procore && ssh mkarric@db1.office.procore
   - hydra_vim: cd ~/Code/Procore/procore/hydra_clients/unified_line_item_adder && vim
   - rails_vim: cd ~/Code/Procore/procore && vim
