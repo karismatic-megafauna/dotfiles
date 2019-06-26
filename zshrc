@@ -61,4 +61,3 @@ eval "$(rbenv init - )"
 # bindkey "^K" up-line-or-beginning-search # Up
 # bindkey "^B" down-line-or-beginning-search # Down
 bindkey "^l" autosuggest-accept
-export HOMEBREW_GITHUB_API_TOKEN=526d8a095f268bc6556ff6896858f9b3a9d317e0
