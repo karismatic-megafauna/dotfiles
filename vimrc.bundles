@@ -1,14 +1,21 @@
 set nocompatible
 filetype off
 
-call plug#begin()
+call plug#begin("~/.vim/plugged")
 
 " Syntax Highlighting
-Plug 'sheerun/vim-polyglot'
+Plug 'moll/vim-node'
+Plug 'pangloss/vim-javascript'
+Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'leafgarland/typescript-vim'
+Plug 'elixir-lang/vim-elixir'
+Plug 'elzr/vim-json'
+Plug 'ElmCast/elm-vim'
+Plug 'avh4/elm-format'
+Plug 'vim-ruby/vim-ruby'
 
 " Shell Util
 Plug 'edkolev/tmuxline.vim'
-" Plug 'rking/ag.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'bling/vim-bufferline'
 Plug 'christoomey/vim-tmux-navigator'
@@ -19,16 +26,24 @@ Plug 'tpope/vim-abolish'
 Plug 'scrooloose/nerdtree'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'junegunn/vim-easy-align'
-Plug 'neoclide/coc.nvim', {'do': './install.sh nightly'}
-Plug 'wellle/tmux-complete.vim'
-Plug 'wellle/targets.vim'
+
+" Tab Compeletion
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
+Plug 'Shougo/deoplete.nvim' " async
+Plug 'Shougo/denite.nvim'
+
+" Text Editing
+Plug 'reedes/vim-wordy'
+Plug 'reedes/vim-pencil'
+
+" Plug 'wellle/targets.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-startify'
 Plug 'benmills/vimux'
-Plug 'janko-m/vim-test'
 
 " Misc
 Plug 'w0rp/ale'

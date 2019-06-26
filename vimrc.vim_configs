@@ -6,6 +6,10 @@ let mapleader = " "
 " allow unsaved background buffers and remember marks/undo for them
 set hidden
 
+" UTF8 encoding for text editing
+scriptencoding utf-8
+set encoding=utf-8
+
 " remember more commands and search history
 set expandtab
 set copyindent
