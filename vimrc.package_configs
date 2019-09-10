@@ -30,10 +30,13 @@ let g:ale_sign_warning = "--"
 let g:ale_fix_on_save = 1
 let g:ale_linters = {
 			\'javascript': ['eslint'],
+			\'typescript': ['tsserver'],
 			\}
-let g:ale_fixers = {}
-let g:ale_fixers['javascript'] = ['prettier']
-let g:ale_fixers['typescript'] = ['prettier']
+
+let g:ale_fixers = {
+      \    'javascript': ['prettier'],
+      \    'typescript': ['prettier'],
+      \}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Nerd Tree
@@ -59,9 +62,6 @@ autocmd BufWinEnter * silent! :%foldopen!
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SQL
 let g:omni_sql_no_default_maps = 1
-
-" elm formatting
-let g:elm_format_autosave = 1
 
 " Turn off parenthesis concealing in JSON
 let g:vim_json_syntax_conceal = 0

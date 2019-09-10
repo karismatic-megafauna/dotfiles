@@ -8,10 +8,7 @@ Plug 'moll/vim-node'
 Plug 'pangloss/vim-javascript'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'leafgarland/typescript-vim'
-Plug 'elixir-lang/vim-elixir'
 Plug 'elzr/vim-json'
-Plug 'ElmCast/elm-vim'
-Plug 'avh4/elm-format'
 Plug 'vim-ruby/vim-ruby'
 
 " Shell Util
@@ -28,10 +25,7 @@ Plug 'bronson/vim-trailing-whitespace'
 Plug 'junegunn/vim-easy-align'
 
 " Tab Compeletion
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
-Plug 'Shougo/deoplete.nvim' " async
-Plug 'Shougo/denite.nvim'
+Plug 'Shougo/deoplete.nvim'
 
 " Text Editing
 Plug 'reedes/vim-wordy'
@@ -46,7 +40,7 @@ Plug 'mhinz/vim-startify'
 Plug 'benmills/vimux'
 
 " Misc
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 Plug 'xolox/vim-misc'
 
 " Colors
