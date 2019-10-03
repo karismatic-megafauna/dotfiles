@@ -24,8 +24,9 @@ Plug 'scrooloose/nerdtree'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'junegunn/vim-easy-align'
 
-" Tab Compeletion
-Plug 'Shougo/deoplete.nvim'
+" Intellisense / Display
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'Shougo/denite.nvim'
 
 " Text Editing
 Plug 'reedes/vim-wordy'
@@ -40,7 +41,6 @@ Plug 'mhinz/vim-startify'
 Plug 'benmills/vimux'
 
 " Misc
-Plug 'dense-analysis/ale'
 Plug 'xolox/vim-misc'
 
 " Colors
