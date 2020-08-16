@@ -12,13 +12,7 @@ filetype off
 call plug#begin("~/.vim/plugged")
 
 " Syntax Highlighting
-Plug 'moll/vim-node'
-Plug 'pangloss/vim-javascript'
-Plug 'MaxMEllon/vim-jsx-pretty'
-Plug 'leafgarland/typescript-vim'
-Plug 'elzr/vim-json'
-Plug 'vim-ruby/vim-ruby'
-Plug 'ianks/vim-tsx'
+Plug 'sheerun/vim-polyglot'
 
 " Shell Util
 Plug 'edkolev/tmuxline.vim'
@@ -29,7 +23,6 @@ Plug 'christoomey/vim-tmux-navigator'
 " Editor Util
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-abolish'
-Plug 'scrooloose/nerdtree'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'junegunn/vim-easy-align'
 
@@ -37,10 +30,9 @@ Plug 'junegunn/vim-easy-align'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Text Editing
-Plug 'reedes/vim-wordy'
-Plug 'reedes/vim-pencil'
+Plug 'nathanaelkane/vim-indent-guides'
 
-" Plug 'wellle/targets.vim'
+Plug 'wellle/targets.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -52,29 +44,26 @@ Plug 'benmills/vimux'
 Plug 'xolox/vim-misc'
 
 " Colors
-Plug 'morhetz/gruvbox'
-Plug 'fenetikm/falcon'
+Plug 'mhartington/oceanic-next'
 
 call plug#end()
 filetype plugin indent on
+
+let g:python3_host_prog = expand('/usr/local/bin/python3')
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Clear Search
-" " Clear the search buffer when hitting return
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" Clear the search buffer when hitting return
 function! MapCR()
   nnoremap <cr> :nohlsearch<cr><cr>
 endfunction
 call MapCR()
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Toggle Relative Number
-" " For when I am pairing with others who don't VIM :)
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" For when I am pairing with others who don't VIM :)
 function! EnableRelativeNumbers()
   set number
   set relativenumber
@@ -95,10 +84,8 @@ function! NumberToggle()
   endif
 endfunc
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MULTIPURPOSE TAB KEY
-" Indent if we're at the beginning of a line. Else, do completion.
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" Indent if we're at the beginning of a line. Else, do completion.
 function! InsertTabWrapper()
   let col = col('.') - 1
   if !col || getline('.')[col - 1] !~ '\k'
@@ -128,6 +115,7 @@ augroup END
 " Settings / Configs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader = " "
+inoremap <C-c> <Esc>
 
 " allow unsaved background buffers and remember marks/undo for them
 set hidden
@@ -159,7 +147,7 @@ set number
 set switchbuf=useopen
 set numberwidth=6
 set winwidth=90
-set re=1
+" set re=1
 set ttyfast
 set lazyredraw
 " set tags=tags;/
@@ -191,11 +179,16 @@ set splitright
 
 " Turn backup off, since most stuff is in SVN
 set nobackup
+set nowritebackup
 set nowb
 set noswapfile
 
 " enable mouse usage
 set mouse=a
+
+" Maintain undo history between sessions
+set undofile
+set undodir=~/.vim/undodir
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Color
@@ -204,9 +197,9 @@ syntax enable
 set guioptions-=T
 set t_Co=256 " 256 colors
 set colorcolumn=80
-set background=dark
-let g:gruvbox_contrast_dark='medium'
-colorscheme gruvbox
+let g:oceanic_next_terminal_bold = 1
+let g:oceanic_next_terminal_italic = 1
+colorscheme OceanicNext
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Statusline
@@ -244,14 +237,20 @@ nnoremap <silent><leader>r :call NumberToggle()<cr>
 " " paste toggle
 nnoremap <leader>P :set invpaste<CR>
 
+" Reload plugins
+nnoremap <silent><leader>1 :source ~/.vimrc \| :PlugInstall<CR>
+
+nmap <leader>dd "_dd
+" nnoremap <leader>dd F<space>xf<space>x
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vimux
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Prompt for a command to run
-map <Leader>vp :VimuxPromptCommand<CR>
+map <leader>vp :VimuxPromptCommand<CR>
 
 " Run last command executed by VimuxRunCommand
-map <Leader>vl :VimuxRunLastCommand<CR>
+map <leader>vl :VimuxRunLastCommand<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FZF
@@ -260,13 +259,6 @@ map <leader>p :FZF<CR>
 
 " make file opening more like vsCode
 map <c-p> :FZF<CR>
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Nerd Tree
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Add control slash and command slash (like atom) to collapse and expand
-map <C-o> :NERDTreeToggle<CR>
-map <C-f> :NERDTreeFind<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Easy Align
@@ -300,23 +292,14 @@ nnoremap <C-N> :bnext<CR>
 let g:VimuxOrientation = "h"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Nerd Tree
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" change default arrows
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
-
-"close NERDTree if it is only window left open
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Folding
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set foldmethod=syntax
 
 " Open folds on window open
 " https://stackoverflow.com/a/8316817
-autocmd BufWinEnter * silent! :%foldopen!
+" autocmd BufWinEnter * silent! :%foldopen!
+au BufRead * normal zR
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Syntax configurations
@@ -334,10 +317,10 @@ let g:jsx_ext_required = 0
 "" CoC
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Better display for messages
-set cmdheight=2
+" set cmdheight=2
 
 " You will have bad experience for diagnostic messages when it's default 4000.
-" set updatetime=300
+set updatetime=300
 
 " don't give |ins-completion-menu| messages.
 set shortmess+=c
@@ -394,7 +377,7 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 nmap <leader>rn <Plug>(coc-rename)
 
 " Remap for format selected region
-xmap <leader>f  <Plug>(coc-format-selected)
+vmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format)
 
 augroup mygroup
@@ -415,10 +398,10 @@ nmap <leader>ac  <Plug>(coc-codeaction)
 nmap <leader>qf  <Plug>(coc-fix-current)
 
 " Create mappings for function text object, requires document symbols feature of languageserver.
-" xmap if <Plug>(coc-funcobj-i)
-" xmap af <Plug>(coc-funcobj-a)
-" omap if <Plug>(coc-funcobj-i)
-" omap af <Plug>(coc-funcobj-a)
+xmap if <Plug>(coc-funcobj-i)
+xmap af <Plug>(coc-funcobj-a)
+omap if <Plug>(coc-funcobj-i)
+omap af <Plug>(coc-funcobj-a)
 
 " Use <C-d> for select selections ranges, needs server support, like: coc-tsserver, coc-python
 " nmap <silent> <C-d> <Plug>(coc-range-select)
@@ -459,7 +442,7 @@ nnoremap <silent> <leader>c  :<C-u>CocList commands<cr>
 " Find symbol of current document
 nnoremap <silent> <leader>o  :<C-u>CocList outline<cr>
 " " Search workspace symbols
-" nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
+nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
 " " Do default action for next item.
 " nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 " " Do default action for previous item.
@@ -467,12 +450,8 @@ nnoremap <silent> <leader>o  :<C-u>CocList outline<cr>
 " " Resume latest coc list
 " nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"" Vim-Pencil
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-augroup pencil
-  autocmd!
-  autocmd FileType markdown,mkd call pencil#init()
-  autocmd FileType text         call pencil#init()
-augroup END
-
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Coc Explorer
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <C-b> :CocCommand explorer<CR>
+map <leader>b :CocCommand explorer<CR>

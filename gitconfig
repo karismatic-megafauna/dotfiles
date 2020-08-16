@@ -42,3 +42,8 @@
   added = green
   changed = yellow
   untracked = magenta
+[credential]
+	helper = ""
+	helper = manager-core
+[credential "https://dev.azure.com"]
+	useHttpPath = true

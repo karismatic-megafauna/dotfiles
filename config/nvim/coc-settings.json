@@ -1,4 +1,12 @@
 {
   "tsserver.npm": "/usr/bin/npm",
-  "eslint.filetypes": ["javascript", "javascriptreact", "typescript"]
+  "eslint.filetypes": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "diagnostic.messageTarget": "float",
+  "coc.preferences.hoverTarget": "float",
+  "explorer.icon.enableNerdfont": true,
+  "explorer.previewAction.onHover":false,
+  "signature.target": "float",
+  "suggest.floatEnable": true,
+  "suggest.enablePreview":true,
+  "codeLens.enable": false
 }

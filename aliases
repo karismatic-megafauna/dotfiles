@@ -28,3 +28,4 @@ alias mkrc='mkrc -v'
 
 # nvim
 alias vim='nvim'
+alias gop='cat ~/WorkStuff/debug.txt | pbcopy'

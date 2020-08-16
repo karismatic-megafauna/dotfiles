@@ -1,4 +1,0 @@
-{
-  "tsserver.npm": "/usr/bin/npm",
-  "eslint.filetypes": ["javascript", "javascriptreact", "typescript"]
-}
