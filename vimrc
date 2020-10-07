@@ -193,6 +193,10 @@ set undodir=~/.vim/undodir
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Color
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if (has("termguicolors"))
+ set termguicolors
+endif
+
 syntax enable
 set guioptions-=T
 set t_Co=256 " 256 colors

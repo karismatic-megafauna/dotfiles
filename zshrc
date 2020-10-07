@@ -31,8 +31,6 @@ plugins=(git zsh-autosuggestions zsh-z)
 
 source $ZSH/oh-my-zsh.sh
 
-echo -e "\n. $(brew --prefix asdf)/asdf.sh" >> ~/.zshrc
-
 ###
 # custom configs
 ###
@@ -56,9 +54,6 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 if [[ $TERM = dumb ]]; then
   unset zle_bracketed_paste
 fi
-
-# PostgreSQL
-export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
 
 # Better history
 # Credits to https://coderwall.com/p/jpj_6q/zsh-better-history-searching-with-arrow-keys
@@ -118,4 +113,4 @@ zle -N _keybind_g_branch && bindkey '^g^g' _keybind_g_branch
 
 . /usr/local/opt/asdf/asdf.sh
 
-. /usr/local/opt/asdf/asdf.sh
+rm -f ~/.zcompdump; compinit

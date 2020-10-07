@@ -29,8 +29,8 @@ windows:
           - cd ~/Code/Procore/procore/hydra_clients/<%= @args[0] %> && yarn install && yarn start
         - rails:
           - cd ~/Code/Procore/procore && bundle install --jobs 4 && DEV_MODE=<%= @args[0] %> bundle exec rails s puma -p 3000
-        - htop:
-          - cd ~/Code/Procore/procore && htop
+        - git:
+          - cd ~/Code/Procore/procore && git status
         - ssh:
           - cd ~/Code/Procore/procore && ssh mkarric@db1.office.procore
   - hydra_vim: cd ~/Code/Procore/procore/hydra_clients/<%= @args[0] %> && vim
