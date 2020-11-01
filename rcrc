@@ -1,1 +1,2 @@
-EXCLUDES="README.md"
+# shellcheck disable=SC2034
+EXCLUDES="README.md"EXCLUDES="README*.md setup.sh teardown.sh up.sh down.sh Shortcuts.json actions-* *.bats *rcm-exclude* Brewfile.lock.json"
