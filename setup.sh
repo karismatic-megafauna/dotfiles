@@ -9,7 +9,8 @@ export DOTFILES="${HOME}/.dotfiles"
 # repo hasn't been cloned yet 🤦...
 #
 # shellcheck disable=SC1091
-. lib/functions/interaction.sh
+#. lib/functions/interaction.sh
+curl -fLo . "https://raw.githubusercontent.com/$_repo/master/lib/functions/interaction.sh"
 
 _resolve_rcm_tag() {
   case "${OSTYPE}" in
