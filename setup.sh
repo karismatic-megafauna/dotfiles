@@ -35,7 +35,7 @@ ERR
 
 _clone_repo() {
   if ! [ -d "${DOTFILES}" ]; then
-    git clone git@github.com:awseward/dotfiles.git "${DOTFILES}"
+    git clone git@github.com:karismatic-megafauna/dotfiles.git "${DOTFILES}"
   else
     echo "WARNING: Directory ${DOTFILES} already exists."
 
