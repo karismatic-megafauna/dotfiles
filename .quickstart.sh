@@ -42,7 +42,7 @@ _prompt_yn() {
   echo -n "$_prompt_txt [$_opts_hint]? " && read -r _yn
   _yn="${_yn:-$_default}"
 
-  if [[ "$(echo -e "$_yn" | tr -d '[:space:]' | tr '[:upper:]' '[:lower:]')" = "y" ]]; then
+  if [[ "$(echo "$_yn" | tr -d '[:space:]' | tr '[:upper:]' '[:lower:]')" = "y" ]]; then
     return 0
   else
     return 1
@@ -57,10 +57,10 @@ _prompt_review() {
   read -r _
   less "$_file"
   cat "$_file"
-  echo -e "\n---"
+  echo "\n---"
 
   if ! _prompt_yn "Execute $_file" 'n'; then
-    2>&1 echo -e "\n=> Aborting (chose not to execute $_file)\n"
+    2>&1 echo "\n=> Aborting (chose not to execute $_file)\n"
     return 1
   fi
 }
