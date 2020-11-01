@@ -10,7 +10,7 @@ export DOTFILES="${HOME}/.dotfiles"
 #
 # shellcheck disable=SC1091
 #. lib/functions/interaction.sh
-curl -fLo . "https://raw.githubusercontent.com/$_repo/master/lib/functions/interaction.sh"
+curl -fLo . "https://raw.githubusercontent.com/karismatic-megafauna/dotfiles/master/lib/functions/interaction.sh"
 
 _resolve_rcm_tag() {
   case "${OSTYPE}" in
