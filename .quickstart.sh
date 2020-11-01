@@ -17,7 +17,7 @@ _mktemp() {
 
 # shellcheck disable=SC2120
 _fetch_setup() {
-  local -r _repo="${1:-awseward/dotfiles}"
+  local -r _repo="${1:-karismatic-megafauna/dotfiles}"
   local -r _quickstart="$(_mktemp)"
   chmod +x "$_quickstart"
   curl -fLo "$_quickstart" "https://raw.githubusercontent.com/$_repo/master/setup.sh"
