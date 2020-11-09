@@ -80,5 +80,4 @@ _up() {
 }
 
 _resolve_rcm_tag
-_clone_repo
 _up

@@ -22,15 +22,17 @@ _review() {
 }
 
 _ensure_brew_installed() {
-  if type brew; then return 0; fi # skip if brew installed
+  which brew && return 0
 
   local install_file
   install_file="$(mktemp)"
-  curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install > "install_file"
+  curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh > "$install_file"
 
   _review "$install_file"
 
-  if ! /usr/bin/ruby "$install_file"; then
+  chmod +x "$install_file"
+
+  if ! "$install_file"; then
     >&2 echo 'Failure installing Homebrew... See: https://brew.sh'
     exit 1
   fi
@@ -69,10 +71,28 @@ _ensure_omz_installed() {
   rm "$install_file"
 }
 
+_ensure_pl10k_installed() {
+  local pl_dir="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
+
+  if [ -d "$pl_dir" ]; then return 0; fi # skip if powerlevel10k installed
+  
+  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$pl_dir"
+}
+
+_ensure_tpm_installed() {
+  local tpm_dir="~/.tmux/plugins/tpm"
+
+  if [ -d "$tpm_dir" ]; then return 0; fi # skip if tpm installed
+
+  git clone https://github.com/tmux-plugins/tpm "$tpm_dir"
+}
+
 main() {
   _ensure_brew_installed
   _ensure_brew_deps_installed
   _ensure_omz_installed
+  _ensure_pl10k_installed
+  _ensure_tpm_installed
 
   export RCRC="$dotfiles/rcrc" && rcup -v -d "$dotfiles" -t "$tag"
 }
